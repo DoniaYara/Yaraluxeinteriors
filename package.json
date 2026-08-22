@@ -1,0 +1,41 @@
+{
+  "name": "yara-luxe-interiors",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cms:setup": "node scripts/cms-setup.js",
+    "cms:bootstrap": "node scripts/cms-bootstrap.js",
+    "cms:import": "node scripts/import-legacy-articles.js",
+    "cms:import-legacy": "node scripts/import-legacy-articles.js",
+    "publish:scheduled": "node scripts/publish-scheduled.js",
+    "author:reset-login-rate-limit": "node scripts/reset-login-rate-limit.js",
+    "test:cms": "node --test tests/cms/workflow.test.js tests/cms/timezone.test.js",
+    "test:e2e": "playwright test",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "@tiptap/extension-image": "^2.11.7",
+    "@tiptap/extension-link": "^2.11.7",
+    "@tiptap/extension-placeholder": "^2.11.7",
+    "@tiptap/extension-underline": "^2.11.7",
+    "@tiptap/pm": "^2.11.7",
+    "@tiptap/react": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
+    "@vercel/blob": "^2.8.0",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.9",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sanitize-html": "^2.17.7",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "prisma": "6.19.3"
+  }
+}

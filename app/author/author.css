@@ -1,0 +1,198 @@
+.cms-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  background: #f4f4f4;
+  color: #1a1a1a;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+.cms-main { min-width: 0; }
+.cms-content { min-width: 0; overflow-x: hidden; }
+.cms-sidebar {
+  background: #0A0A0A;
+  color: #cfcfcf;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 20;
+}
+.cms-brand {
+  font-family: "Titillium Web", sans-serif;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.cms-sidebar nav { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.cms-sidebar a {
+  color: #b8b8b8;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+.cms-sidebar a.is-active,
+.cms-sidebar a:hover { color: #fff; background: #161616; }
+.cms-logout, .cms-menu {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.cms-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+.cms-menu { display: none; color: #1a1a1a; border-color: #ccc; }
+.cms-user { font-size: 13px; color: #666; }
+.cms-content { padding: 28px 24px 48px; }
+.cms-content h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.cms-lead { color: #666; margin-bottom: 24px; }
+.cms-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.cms-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  padding: 16px;
+}
+.cms-card strong { display: block; font-size: 28px; font-family: "Titillium Web", sans-serif; }
+.cms-card span { font-size: 12px; color: #777; letter-spacing: 0.06em; text-transform: uppercase; }
+.cms-table, .cms-form, .cms-panel {
+  background: #fff;
+  border: 1px solid #ececec;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+.cms-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.cms-table th, .cms-table td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+.cms-badge {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid #ddd;
+}
+.cms-badge.published { color: #1b6b3a; border-color: #1b6b3a; }
+.cms-badge.draft { color: #8a6d1d; border-color: #8a6d1d; }
+.cms-badge.scheduled { color: #1d4f8a; border-color: #1d4f8a; }
+.cms-badge.planned { color: #555; }
+.cms-badge.trash { color: #8a1d1d; border-color: #8a1d1d; }
+.cms-badge.disabled { color: #8a1d1d; }
+.cms-badge.active { color: #1b6b3a; }
+.cms-actions, .cms-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.cms-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #1a1a1a;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 9px 14px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.cms-btn.ghost { background: #fff; color: #1a1a1a; }
+.cms-btn.danger { background: #fff; color: #8a1d1d; border-color: #8a1d1d; }
+.cms-field { margin-bottom: 14px; }
+.cms-field label { display: block; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; color: #555; }
+.cms-field input, .cms-field textarea, .cms-field select {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  font: inherit;
+  background: #fff;
+}
+.cms-field textarea { min-height: 90px; }
+.cms-hint { font-size: 12px; color: #888; margin-top: 4px; }
+.cms-error { color: #8a1d1d; margin-bottom: 12px; }
+.cms-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cms-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+.cms-media-card { border: 1px solid #eee; background: #fff; padding: 8px; cursor: pointer; }
+.cms-media-card img { width: 100%; height: 120px; object-fit: cover; }
+.cms-login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #0A0A0A;
+  color: #fff;
+}
+.cms-login form {
+  width: min(400px, calc(100% - 32px));
+  border: 1px solid #2a2a2a;
+  padding: 32px;
+}
+.cms-login h1 { font-family: "Titillium Web", sans-serif; font-weight: 400; margin-bottom: 8px; }
+.cms-login p { color: #999; margin-bottom: 22px; }
+.cms-login input { width: 100%; margin-bottom: 12px; padding: 12px; background: #111; border: 1px solid #333; color: #fff; }
+.cms-editor .ProseMirror {
+  min-height: 420px;
+  border: 1px solid #ddd;
+  padding: 16px 18px;
+  background: #fff;
+}
+.cms-toolbar { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; max-width: 100%; }
+.cms-toolbar button {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 6px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.cms-field input[type="datetime-local"],
+.cms-field input[type="date"] { max-width: 100%; }
+.cms-modal-card { background: #fff; width: min(900px, 100%); max-height: 90vh; overflow: auto; padding: 20px; }
+.cms-toolbar button.is-active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.cms-modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,.55);
+  display: grid; place-items: center; z-index: 50; padding: 20px;
+}
+.cms-modal-card { background: #fff; width: min(900px, 100%); max-height: 90vh; overflow: auto; padding: 20px; }
+.cms-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.4); border: 0; z-index: 15; }
+@media (max-width: 1100px) {
+  .cms-cards { grid-template-columns: repeat(2, 1fr); }
+  .cms-grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .cms-shell { grid-template-columns: 1fr; }
+  .cms-sidebar {
+    position: fixed;
+    transform: translateX(-110%);
+    transition: transform .2s;
+    height: 100vh;
+  }
+  .cms-sidebar.is-open { transform: none; }
+  .cms-menu { display: inline-flex; }
+}
+@media (max-width: 430px) {
+  .cms-content { padding: 16px 12px 40px; }
+  .cms-cards { grid-template-columns: 1fr; }
+  .cms-top { padding: 12px; }
+  .cms-toolbar button { min-height: 36px; }
+  .cms-login form { padding: 20px 16px; }
+}

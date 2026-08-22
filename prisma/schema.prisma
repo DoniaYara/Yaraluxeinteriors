@@ -1,0 +1,139 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Author {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  bio          String    @default("")
+  imageUrl     String    @default("")
+  role         String    @default("author")
+  status       String    @default("active")
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  articles     Article[]
+  media        Media[]
+  sessions     Session[]
+  audits       AuditLog[]
+}
+
+model Session {
+  id        String    @id @default(cuid())
+  authorId  String
+  tokenHash String
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime  @default(now())
+  author    Author    @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([authorId])
+  @@index([expiresAt])
+}
+
+model Category {
+  id              String             @id @default(cuid())
+  name            String
+  slug            String             @unique
+  description     String             @default("")
+  seoTitle        String             @default("")
+  metaDescription String             @default("")
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  articles        ArticleCategory[]
+}
+
+model Article {
+  id                String             @id @default(cuid())
+  legacyId          String?            @unique
+  title             String
+  slug              String             @unique
+  content           String             @default("") @db.Text
+  excerpt           String             @default("")
+  featuredImage     String             @default("")
+  featuredImageAlt  String             @default("")
+  seoTitle          String             @default("")
+  metaDescription   String             @default("")
+  canonicalUrl      String             @default("")
+  tags              String             @default("")
+  notes             String             @default("")
+  authorId          String
+  status            String             @default("draft")
+  intendedPublishOn String?
+  publishAt         DateTime?
+  publishedAt       DateTime?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  deletedAt         DateTime?
+  createdBy         String
+  updatedBy         String
+  author            Author             @relation(fields: [authorId], references: [id])
+  categories        ArticleCategory[]
+  redirects         ArticleRedirect[]
+
+  @@index([status, publishAt])
+  @@index([status, publishedAt])
+  @@index([authorId])
+}
+
+model ArticleCategory {
+  articleId  String
+  categoryId String
+  article    Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@id([articleId, categoryId])
+}
+
+model ArticleRedirect {
+  id        String   @id @default(cuid())
+  fromPath  String   @unique
+  toPath    String
+  articleId String
+  createdAt DateTime @default(now())
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+}
+
+model Media {
+  id         String   @id @default(cuid())
+  url        String
+  pathname   String
+  filename   String
+  mimeType   String
+  size       Int
+  alt        String   @default("")
+  createdAt  DateTime @default(now())
+  uploadedBy String
+  author     Author   @relation(fields: [uploadedBy], references: [id])
+
+  @@index([uploadedBy])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  action     String
+  actorId    String?
+  targetType String   @default("")
+  targetId   String   @default("")
+  meta       String   @default("")
+  createdAt  DateTime @default(now())
+  actor      Author?  @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+}
+
+model LoginAttempt {
+  id        String   @id @default(cuid())
+  email     String
+  ip        String   @default("")
+  createdAt DateTime @default(now())
+
+  @@index([email, createdAt])
+}
