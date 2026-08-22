@@ -12,9 +12,30 @@
   --yl-kicker: "Josefin Sans", sans-serif;
 }
 
-.ylp *:not(.home-google-reviews, .home-google-reviews *),
-.ylp *:not(.home-google-reviews, .home-google-reviews *)::before,
-.ylp *:not(.home-google-reviews, .home-google-reviews *)::after {
+.ylp *:not(
+  .home-google-reviews,
+  .home-google-reviews *,
+  .test-home-services,
+  .test-home-services *,
+  .seo-final,
+  .seo-final *
+),
+.ylp *:not(
+  .home-google-reviews,
+  .home-google-reviews *,
+  .test-home-services,
+  .test-home-services *,
+  .seo-final,
+  .seo-final *
+)::before,
+.ylp *:not(
+  .home-google-reviews,
+  .home-google-reviews *,
+  .test-home-services,
+  .test-home-services *,
+  .seo-final,
+  .seo-final *
+)::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1290,4 +1311,39 @@
   .ylp .home-google-reviews .home-ggl-arrow.next { right: 0; left: auto; }
   .ylp .home-google-reviews .home-ggl-nav { margin-top: 72px; }
   .ylp .home-google-reviews .home-ggl-card { padding: 0; }
+}
+
+/* Homepage services — restore spacing killed by .ylp * reset */
+.ylp .test-home-services.sp {
+  padding: 100px 72px !important;
+}
+.ylp .test-home-services .svc-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+.ylp .test-home-services .svc-card-a-body {
+  padding: 28px 26px 30px !important;
+}
+.ylp .test-home-services .svc-card-a-body h3 {
+  margin: 0 0 10px !important;
+}
+.ylp .test-home-services .svc-card-a-body p {
+  margin: 0 0 16px !important;
+}
+.ylp .test-home-services .svc-card-link {
+  padding-bottom: 2px;
+}
+@media (max-width: 1024px) {
+  .ylp .test-home-services.sp { padding: 72px 48px !important; }
+  .ylp .test-home-services .svc-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .ylp .test-home-services.sp { padding: 56px 24px !important; }
+  .ylp .test-home-services .svc-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .ylp .test-home-services .svc-card-a-body { padding: 24px 20px 26px !important; }
 }
