@@ -79,14 +79,14 @@ Schedule times in the editor are **Australia/Melbourne** (daylight saving aware)
 `vercel.json` requests:
 
 ```
-*/5 * * * *   GET /api/cron/publish-scheduled
+0 0 * * *   GET /api/cron/publish-scheduled
 ```
 
 with `Authorization: Bearer $CRON_SECRET`.
 
-Vercel **Hobby** only runs cron jobs once per day. On Hobby, an author-chosen hour/minute is **not** guaranteed; the article publishes on the next daily run after `publishAt`.
+This daily schedule fits Vercel **Hobby**. An author-chosen hour/minute is **not** guaranteed; the article publishes on the next daily run after `publishAt`.
 
-Vercel **Pro** honors the five-minute schedule in this repo.
+Vercel **Pro** can use a denser schedule (e.g. every five minutes) if you upgrade and change `vercel.json`.
 
 Local / Ubuntu:
 

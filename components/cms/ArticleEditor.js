@@ -214,7 +214,7 @@ export default function ArticleEditor({ article, authors = [], categories = [], 
             <div className="cms-field">
               <label>Schedule publish at ({MELBOURNE_TZ})</label>
               <input type="datetime-local" data-testid="schedule-at" value={form.publishAt} onChange={(e) => setField("publishAt", e.target.value)} />
-              <p className="cms-hint">Interpreted as Australia/Melbourne, including daylight saving. Stored as UTC. Vercel Hobby cron runs once per day, so the exact minute is not guaranteed on that plan. Vercel Pro uses the five-minute job in vercel.json.</p>
+              <p className="cms-hint">Interpreted as Australia/Melbourne, including daylight saving. Stored as UTC. Vercel Hobby cron runs once per day (midnight UTC), so the exact minute is not guaranteed on that plan.</p>
             </div>
             <div className="cms-field"><label>SEO title</label><input value={form.seoTitle} onChange={(e) => setField("seoTitle", e.target.value)} /><p className="cms-hint">{form.seoTitle.length}/{SEO_TITLE_HINT} recommended</p></div>
             <div className="cms-field"><label>Meta description</label><textarea value={form.metaDescription} onChange={(e) => setField("metaDescription", e.target.value)} /><p className="cms-hint">{form.metaDescription.length}/{META_DESC_HINT} recommended</p></div>
