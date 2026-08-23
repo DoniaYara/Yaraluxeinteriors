@@ -2,6 +2,7 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import FaqList from "@/components/FaqList";
+import BookingBar from "@/components/BookingBar";
 import { FAQ_BANNER, PAGE_FAQS, U } from "@/lib/data";
 import { faqsPageGraph } from "@/lib/schema";
 import { withPageSeo } from "@/lib/seo";
@@ -43,7 +44,9 @@ export default function FaqsPage() {
         </div>
       </section>
 
-      <section className="faqs-spacer" style={{ backgroundImage: `url('${U}/2020/06/bg3-home2.png')` }} />
+      <section className="faqs-spacer" style={{ backgroundImage: `url('${U}/2020/06/bg3-home2.png')` }}>
+        <BookingBar />
+      </section>
     </div>
   );
 }

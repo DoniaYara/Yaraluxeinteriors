@@ -969,7 +969,8 @@ form textarea { min-height: 120px; resize: vertical; }
   height: 0;
   overflow: hidden;
 }
-.ylp .book-form .hp {
+.ylp .book-form .hp,
+.faqs-spacer .book-form .hp {
   height: 0;
   width: 0;
   padding: 0;
@@ -1851,8 +1852,13 @@ form textarea { min-height: 120px; resize: vertical; }
   color: #fff;
 }
 .faqs-spacer {
-  min-height: 210px;
+  min-height: 0;
+  padding: 0 0 80px;
+  overflow: visible;
   background: #0A0A0A 100% 100% / auto no-repeat;
+}
+.faqs-spacer .book-bar {
+  margin-bottom: 0;
 }
 
 /* Blog listing + posts */
@@ -2392,7 +2398,8 @@ form textarea { min-height: 120px; resize: vertical; }
   .process-blog { padding: 80px 0; }
   .faqs-cta { padding: 60px 0; }
   .faqs-cta h2 { font-size: 34px; }
-  .faqs-spacer { min-height: 160px; background-position: 0 0; }
+  .faqs-spacer { min-height: 0; padding-bottom: 60px; background-position: 0 0; }
+  .faqs-spacer .book-bar { margin-bottom: 0; }
 }
 
 /* Homepage — live dark Home 2 */

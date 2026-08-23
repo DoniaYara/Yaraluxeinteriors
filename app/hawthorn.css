@@ -682,7 +682,8 @@
   padding-top: 215px;
 }
 
-.ylp .book-bar {
+.ylp .book-bar,
+.faqs-spacer .book-bar {
   position: relative;
   z-index: 6;
   margin-top: -55px;
@@ -690,7 +691,8 @@
   padding: 0 20px;
   pointer-events: none;
 }
-.ylp .book-bar-inner {
+.ylp .book-bar-inner,
+.faqs-spacer .book-bar-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.7fr);
   gap: 14px;
@@ -700,7 +702,9 @@
   pointer-events: auto;
 }
 .ylp .book-form-box,
-.ylp .book-call-box {
+.ylp .book-call-box,
+.faqs-spacer .book-form-box,
+.faqs-spacer .book-call-box {
   background: #1A1A1A;
   color: #fff;
   padding: 28px 30px 30px;
@@ -710,7 +714,8 @@
   justify-content: center;
   text-decoration: none;
 }
-.ylp .book-bar-title {
+.ylp .book-bar-title,
+.faqs-spacer .book-bar-title {
   font-family: var(--yl-sans);
   font-size: 22px;
   font-weight: 700;
@@ -719,7 +724,8 @@
   letter-spacing: 0;
   margin: 0 0 18px;
 }
-.ylp .book-form {
+.ylp .book-form,
+.faqs-spacer .book-form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
@@ -727,7 +733,10 @@
 }
 .ylp .book-form input,
 .ylp .book-form select,
-.ylp .book-form button {
+.ylp .book-form button,
+.faqs-spacer .book-form input,
+.faqs-spacer .book-form select,
+.faqs-spacer .book-form button {
   height: 48px;
   width: 100%;
   border: 0;
@@ -738,27 +747,34 @@
   padding: 0 14px;
 }
 .ylp .book-form input,
-.ylp .book-form select {
+.ylp .book-form select,
+.faqs-spacer .book-form input,
+.faqs-spacer .book-form select {
   background: #fff;
   color: #222;
   appearance: none;
   -webkit-appearance: none;
 }
 .ylp .book-form input::placeholder,
-.ylp .book-form select:invalid {
+.ylp .book-form select:invalid,
+.faqs-spacer .book-form input::placeholder,
+.faqs-spacer .book-form select:invalid {
   color: #9aa0a6;
 }
-.ylp .book-form select {
+.ylp .book-form select,
+.faqs-spacer .book-form select {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%239aa0a6' d='M1 1l5 5 5-5'/></svg>");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 36px;
   color: #9aa0a6;
 }
-.ylp .book-form select:valid {
+.ylp .book-form select:valid,
+.faqs-spacer .book-form select:valid {
   color: #222;
 }
-.ylp .book-form button {
+.ylp .book-form button,
+.faqs-spacer .book-form button {
   background: #b89a72;
   color: #1a1a1a;
   font-weight: 700;
@@ -767,48 +783,59 @@
   letter-spacing: 0.02em;
   transition: background 0.2s;
 }
-.ylp .book-form button:hover { background: #a88a62; }
-.ylp .book-bar-ok {
+.ylp .book-form button:hover,
+.faqs-spacer .book-form button:hover { background: #a88a62; }
+.ylp .book-bar-ok,
+.faqs-spacer .book-bar-ok {
   font-family: var(--yl-sans);
   font-size: 15px;
   font-weight: 400;
   color: rgba(255,255,255,0.9);
   line-height: 1.6;
 }
-.ylp .book-bar-err {
+.ylp .book-bar-err,
+.faqs-spacer .book-bar-err {
   grid-column: 1 / -1;
   margin: 0;
   font-size: 13px;
   color: #f2b4b4;
 }
-.ylp .book-call-box { transition: background 0.25s; }
-.ylp .book-call-box:hover { background: #141414; }
-.ylp .book-call-row {
+.ylp .book-call-box,
+.faqs-spacer .book-call-box { transition: background 0.25s; }
+.ylp .book-call-box:hover,
+.faqs-spacer .book-call-box:hover { background: #141414; }
+.ylp .book-call-row,
+.faqs-spacer .book-call-row {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.ylp .book-call-icon {
+.ylp .book-call-icon,
+.faqs-spacer .book-call-icon {
   width: 56px;
   height: 56px;
   flex-shrink: 0;
   color: #fff;
 }
-.ylp .book-call-icon svg { width: 100%; height: 100%; display: block; }
-.ylp .book-call-text {
+.ylp .book-call-icon svg,
+.faqs-spacer .book-call-icon svg { width: 100%; height: 100%; display: block; }
+.ylp .book-call-text,
+.faqs-spacer .book-call-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
   min-width: 0;
 }
-.ylp .book-call-label {
+.ylp .book-call-label,
+.faqs-spacer .book-call-label {
   font-family: var(--yl-sans);
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   line-height: 1.3;
 }
-.ylp .book-call-num {
+.ylp .book-call-num,
+.faqs-spacer .book-call-num {
   font-family: var(--yl-sans);
   font-size: 18px;
   font-weight: 400;
@@ -822,10 +849,14 @@
 @media (max-width: 1024px) {
   .ylp .hero { padding: 120px 24px 80px; }
   .ylp > .hero:has(+ .book-bar) { padding-bottom: 80px; }
-  .ylp .book-bar { padding: 0 16px; margin-top: -45px; margin-bottom: -135px; }
-  .ylp .book-bar-inner { grid-template-columns: 1fr; }
+  .ylp .book-bar,
+  .faqs-spacer .book-bar { padding: 0 16px; margin-top: -45px; margin-bottom: -135px; }
+  .ylp .book-bar-inner,
+  .faqs-spacer .book-bar-inner { grid-template-columns: 1fr; }
   .ylp .book-form-box,
-  .ylp .book-call-box { min-height: 0; padding: 24px 22px; }
+  .ylp .book-call-box,
+  .faqs-spacer .book-form-box,
+  .faqs-spacer .book-call-box { min-height: 0; padding: 24px 22px; }
   .ylp .sp, .ylp .dark-sp { padding: 60px 40px; }
   .ylp .book-bar + .sp,
   .ylp .book-bar + .dark-sp,
@@ -862,9 +893,12 @@
   .ylp .gallery-strip { grid-template-columns: repeat(3, 1fr); margin: 48px 0; padding: 0 40px; }
 }
 @media (max-width: 768px) {
-  .ylp .book-bar { padding: 0 12px; margin-top: -35px; margin-bottom: -75px; }
-  .ylp .book-form { grid-template-columns: 1fr; }
-  .ylp .book-bar-title { font-size: 20px; margin-bottom: 14px; }
+  .ylp .book-bar,
+  .faqs-spacer .book-bar { padding: 0 12px; margin-top: -35px; margin-bottom: -75px; }
+  .ylp .book-form,
+  .faqs-spacer .book-form { grid-template-columns: 1fr; }
+  .ylp .book-bar-title,
+  .faqs-spacer .book-bar-title { font-size: 20px; margin-bottom: 14px; }
   .ylp .sp, .ylp .dark-sp { padding: 50px 20px; }
   .ylp .book-bar + .sp,
   .ylp .book-bar + .dark-sp,
