@@ -103,12 +103,20 @@
   background-position: center;
   z-index: 0;
 }
+/* Single overlay only — avoid stacking with .hero::after from style.css */
+.ylp .hero::after {
+  display: none;
+}
 .ylp .hero-overlay {
   position: absolute;
   inset: 0;
   background: #1A1A1A;
   opacity: 0.32;
   z-index: 1;
+}
+/* Homepage keeps the stronger overlay */
+.home-page .ylp .hero-overlay {
+  opacity: 0.5;
 }
 .ylp .hero-content { position: relative; z-index: 2; max-width: 860px; }
 
