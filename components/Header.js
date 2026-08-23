@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AREAS, LOGO, U } from "@/lib/data";
-import { AREA_URLS, isAreaPath, isServicePath, SERVICE_URLS } from "@/lib/urls";
+import { isAreaPath, isServicePath, SERVICE_URLS } from "@/lib/urls";
 import OptImage from "@/components/OptImage";
 import { SIZES } from "@/lib/image-alts";
 
@@ -176,9 +176,15 @@ export default function Header() {
               </ul>
             </li>
             <li className={`${areaOn ? "active" : ""} ${openSub === "areas" ? "open" : ""}`}>
-              <Link href={AREA_URLS.Hawthorn} onClick={(e) => toggleSub("areas", e)}>
+              <button
+                type="button"
+                className="nav-parent"
+                aria-expanded={openSub === "areas"}
+                aria-haspopup="true"
+                onClick={(e) => toggleSub("areas", e)}
+              >
                 Areas <span className="caret" />
-              </Link>
+              </button>
               <ul className="sub sub-areas">
                 {AREAS.map((area) => (
                   <li key={area.href}>
