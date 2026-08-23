@@ -2361,7 +2361,7 @@ form textarea { min-height: 120px; resize: vertical; }
   .copy { flex-direction: column; }
   .about-founder-copy { padding: 40px 0 22px; }
   .about-sketch { padding: 60px 0 0; }
-  .about-sketch-photo { margin: 0 0 40px; }
+  .about-sketch-photo { margin: 0 auto 40px; }
   .our-svc-benefits,
   .our-svc-offer,
   .our-svc-features,
