@@ -110,6 +110,7 @@ test("toolbar, link, image, persistence, long article", async ({ page }) => {
   await page.getByTestId("toolbar-image").click();
   const fileInput = page.locator(".cms-modal input[type=file]");
   await fileInput.setInputFiles({ name: "qa.png", mimeType: "image/png", buffer: TINY_PNG });
+  await page.getByTestId("media-upload").click({ timeout: 5000 }).catch(() => {});
   await page.locator(".cms-media-card").first().click({ timeout: 15000 }).catch(async () => {
     await page.getByRole("button", { name: "Close" }).click();
   });
