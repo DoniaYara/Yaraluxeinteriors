@@ -268,7 +268,7 @@ export default function CommercialServicesPage() {
       <section className="sp" style={{ background: "var(--yl-light)" }}>
         <div className="two-col-img">
           <div>
-            <h2 className="h2">Commercial Interior Designers Serving Melbourne</h2>
+            <h2 className="h2">Commercial Interior Designer Serving Melbourne</h2>
             <p className="bt">We are happy to offer commercial interior design Melbourne services in the following areas. Businesses searching for Commercial Interior Design Near Me, Commercial Interior Design Service Near Me, Commercial Interior Design Companies Melbourne and Best Interior Designers Melbourne — we are here to help.</p>
             <p className="bt">Trust Yara Luxe Interiors with bespoke design ideas, luxurious aesthetics, and functional business usability.</p>
           </div>
@@ -279,7 +279,7 @@ export default function CommercialServicesPage() {
       </section>
 
       <AreasWeServe
-        title="Commercial Interior Designers Serving Melbourne"
+        title="Commercial Interior Designer Serving Melbourne"
         intro="We are happy to offer commercial interior design Melbourne services in:"
         outro="In and around Melbourne commercial areas. Interior design services in Melbourne are provided by the company."
         items={[["Toorak","3142"],["Brighton","3186"],["South Yarra","3141"],["Hawthorn","3122"],["Camberwell","3124"],["Kew","3101"],["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Brighton East","3187"]]}
