@@ -55,7 +55,7 @@ export default function ServicesPage() {
       <section className="sp" style={{ background: "#fff" }}>
         <div className="ylp-grid">
           <div>
-            <h2 className="h2">Luxury Residential Interior Designers Melbourne</h2>
+            <h2 className="h2">Luxury Residential Interior Design Melbourne</h2>
             <p className="bt">Yara Luxe Interiors crafts elegant, bespoke homes with luxury residential interior solutions designed for contemporary living in Melbourne. Our in-house designers have more than 19 years of experience and excel in creating interior spaces that are comfortable, functional and elegant.</p>
             <p className="bt">Whether you're planning a new apartment or a complete home remodel, our team delivers interiors that are carefully thought out for your lifestyle, your property and your future.</p>
             <p className="bt">From whole-home design concepts to styling upgrades for individual rooms, we develop interiors around your personal style and architectural vision — every space balanced, inviting and harmonious.</p>
