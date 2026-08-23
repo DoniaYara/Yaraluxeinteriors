@@ -65,7 +65,7 @@ export default function BathroomServicesPage() {
       </section>
 
       <section className="sp" style={{ background: "var(--yl-light)" }}>
-        <h2 className="h2">Why Homeowners Choose Our Bathroom Interior Designers</h2>
+        <h2 className="h2">Why Homeowners Choose Our Bathroom Interior Designer</h2>
         <p className="bt" style={{ maxWidth: 760, marginBottom: 40 }}>Choosing the right interior designer for bathroom remodel projects is essential for achieving both beauty and functionality. We design and create a bespoke interior bathroom solution to complement your home.</p>
         <div className="cards-grid-2 light-cards" style={{ marginTop: 0 }}>
           <ExpCard n="01" title="Customised Bathroom Designs" desc="Each client has their own tastes, needs and budgets. We design your bathroom interiors to be according to your life and vision." />
