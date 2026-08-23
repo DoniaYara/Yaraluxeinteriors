@@ -55,7 +55,7 @@ export default function CommercialServicesPage() {
       <section className="sp" style={{ background: "#fff" }}>
         <div className="ylp-grid">
           <div>
-            <h2 className="h2">Affordable Commercial Interior Designers Melbourne</h2>
+            <h2 className="h2">Affordable Commercial Interior Designer Melbourne</h2>
             <p className="bt">We provide high-quality commercial interior design services to companies looking for a modern, functional, and appealing interior. Our expert designers specialise in developing and designing commercial spaces to enhance the customer experience, improve customer productivity and increase the spatial functionality of the space whilst also strengthening the brand.</p>
             <p className="bt">We are one of the reputed commercial interior design companies in Melbourne, working closely with business owners, developers, architects and project managers to develop interiors that meet requirements and operational demands as well as aesthetic and long-term commercial needs.</p>
             <p className="bt">Whether you're looking for commercial interior design in Melbourne for a luxury retail store, office spaces, restaurant design, café design or hospitality services, we can deliver design solutions that are both functional and innovative while incorporating the timeless elements.</p>
