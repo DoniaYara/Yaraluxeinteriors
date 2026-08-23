@@ -204,16 +204,17 @@
   color: #444;
   padding: 10px 0;
   border-bottom: 1px solid var(--yl-border);
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  column-gap: 12px;
+  display: flex;
   align-items: center;
+  gap: 12px;
 }
 .ylp .ul li::before {
   content: "";
   width: 16px;
   height: 1px;
   background: var(--yl-black);
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .ylp .tc { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
@@ -278,16 +279,17 @@
   color: rgba(255,255,255,0.86);
   padding: 9px 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  display: grid;
-  grid-template-columns: 14px 1fr;
-  column-gap: 12px;
+  display: flex;
   align-items: center;
+  gap: 12px;
 }
 .ylp .ul-dark li::before {
   content: "";
   width: 14px;
   height: 1px;
   background: rgba(255,255,255,0.4);
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .ylp .styles-row-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 32px; }
