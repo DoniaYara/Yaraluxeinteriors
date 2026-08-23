@@ -243,6 +243,11 @@ html.is-scrolled .site-header,
   opacity: 0.5;
   z-index: 1;
 }
+/* Location/service heroes use .hero-overlay only (not ::after) */
+.ylp .hero::after {
+  content: none;
+  display: none;
+}
 .hero-copy { position: relative; z-index: 2; padding: 40px 20px; }
 .hero h1, .hero h2 {
   font-family: var(--font-head);
@@ -2415,8 +2420,8 @@ form textarea { min-height: 120px; resize: vertical; }
 .home-page .ylp > .hero::after { display: none; }
 .home-page .ylp > .hero .hero-overlay {
   display: block;
-  background: #1A1A1A;
-  opacity: 0.5;
+  background: rgba(26, 26, 26, 0.5);
+  opacity: 1;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .home-page .ylp > .hero {

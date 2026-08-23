@@ -105,18 +105,24 @@
 }
 /* Single overlay only — avoid stacking with .hero::after from style.css */
 .ylp .hero::after {
-  display: none;
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
 }
 .ylp .hero-overlay {
   position: absolute;
   inset: 0;
-  background: #1A1A1A;
-  opacity: 0.32;
+  /* rgba alpha = overlay strength (do not also set opacity) */
+  background: rgba(26, 26, 26, 0.4);
+  opacity: 1;
   z-index: 1;
+  pointer-events: none;
 }
 /* Homepage keeps the stronger overlay */
-.home-page .ylp .hero-overlay {
-  opacity: 0.5;
+.home-page .ylp > .hero .hero-overlay {
+  background: rgba(26, 26, 26, 0.5);
+  opacity: 1;
 }
 .ylp .hero-content { position: relative; z-index: 2; max-width: 860px; }
 
