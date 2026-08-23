@@ -1178,14 +1178,23 @@ form textarea { min-height: 120px; resize: vertical; }
   display: grid;
   grid-template-columns: 41.6% 58.4%;
   gap: 0;
-  align-items: start;
+  align-items: center;
 }
 .about-sketch-photo {
   position: relative;
   z-index: 2;
-  margin: 0 74px -331px 48px;
+  margin: 0 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.about-sketch-photo img { width: 100%; }
+.about-sketch-photo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
 .about-acc .faq-item { border-bottom: 1px solid rgba(0,0,0,0.2); background: #fff; }
 .about-acc .faq-item:last-child { border-bottom: none; }
 .about-acc .faq-q {
@@ -2318,7 +2327,7 @@ form textarea { min-height: 120px; resize: vertical; }
     padding: 75px 0 22px;
   }
   .about-sketch { padding: 90px 0 98px; }
-  .about-sketch-photo { margin: 40px 0 0; }
+  .about-sketch-photo { margin: 40px auto 0; }
   .about-philosophy { padding: 80px 0; }
   .about-flips .support-box:last-child {
     grid-column: 1 / -1;
