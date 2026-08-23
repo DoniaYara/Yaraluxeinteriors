@@ -603,6 +603,10 @@
 .ylp.loc-nb .cta-bg { background-image: url("/uploads/2026/06/interior-design-ideas-for-new-build-homes.webp"); }
 .ylp.svc-sup .hero-bg,
 .ylp.loc-sup .hero-bg { background-image: url("/uploads/2026/06/supervisionBanner.webp"); }
+.ylp.svc-fh .hero-bg {
+  background-image: url("/uploads/2026/06/full-home-interior-designer-melbourne.webp");
+  background-position: center 30%;
+}
 .ylp.svc-sup .cta-bg,
 .ylp.loc-sup .cta-bg { background-image: url("/uploads/2026/06/supervision1.webp"); }
 .ylp.loc-res-b .hero-bg,
@@ -995,7 +999,6 @@
 .pf-page .projects-box {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 .pf-page .projects-box img {
   width: 100%;

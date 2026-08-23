@@ -267,7 +267,7 @@ export function HomeAreas() {
           <div className="home-areas-copy">
             <div className="ot-heading is-dots">
               <span className="ot-kicker">[ areas we serve ]</span>
-              <h2 className="ot-title">Interior Designers Across Melbourne</h2>
+              <h2 className="ot-title">Interior Design Services Across Melbourne</h2>
             </div>
             <p className="home-seo-intro">
               Based in Bentleigh, we design homes across Melbourne&apos;s inner east, bayside and surrounding suburbs.

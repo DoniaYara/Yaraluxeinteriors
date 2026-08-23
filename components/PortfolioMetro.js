@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { PROJECTS, U, asProject } from "@/lib/data";
 import OptImage from "@/components/OptImage";
 import { SIZES } from "@/lib/image-alts";
@@ -12,8 +11,7 @@ const HOME_FILTERS = ["All", "Decor", "Exterior", "Furniture", "Interior"];
 export default function PortfolioMetro({
   filters = FILTERS,
   gridClass = "projects-grid pf_5_cols style-2 w-auto",
-  limit,
-  href = ""
+  limit
 }) {
   const [filter, setFilter] = useState("All");
   const list = PROJECTS.map(asProject);
@@ -43,8 +41,8 @@ export default function PortfolioMetro({
         </ul>
       </div>
       <div className={gridClass}>
-        {shown.map((p) => {
-          const inner = (
+        {shown.map((p) => (
+          <div className="project-item" key={p.title}>
             <div className="projects-box">
               <div className="projects-thumbnail">
                 <OptImage
@@ -68,13 +66,8 @@ export default function PortfolioMetro({
                 </div>
               </div>
             </div>
-          );
-          return (
-            <div className="project-item" key={p.title}>
-              {href ? <Link href={href}>{inner}</Link> : inner}
-            </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

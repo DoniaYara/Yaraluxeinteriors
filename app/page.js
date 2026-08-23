@@ -86,7 +86,6 @@ export default async function HomePage() {
           filters={HOME_FILTERS}
           gridClass="projects-grid pf_4_cols style-1 img-scale w-auto"
           limit={12}
-          href="/portfolio"
         />
         <div className="center mt-40">
           <Link className="octf-btn octf-btn-light" href="/portfolio">View All Projects</Link>
