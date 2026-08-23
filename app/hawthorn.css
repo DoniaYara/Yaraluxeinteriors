@@ -418,7 +418,7 @@
   margin: 24px 0 12px;
   display: block;
 }
-.ylp .ul-dark li { align-items: flex-start; }
+.ylp .ul-dark li { align-items: center; }
 .ylp .process-sp { background: var(--yl-black); padding: 90px 60px; }
 .ylp .process-sp > .h2w {
   border: 0;
