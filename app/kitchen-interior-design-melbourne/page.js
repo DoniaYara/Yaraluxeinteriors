@@ -13,13 +13,13 @@ export const metadata = withPageSeo({
   description: "Kitchen interior design in Melbourne for renovations and new builds, including bespoke cabinetry, layouts, lighting, storage and premium finishes."
 }, "/kitchen-interior-design-melbourne", { image: SERVICE_OG_IMAGE["/kitchen-interior-design-melbourne"], imageAlt: fileAlt(SERVICE_OG_IMAGE["/kitchen-interior-design-melbourne"]) });
 
-function ExpCard({ n, title, desc, items, light }) {
+function ExpCard({ n, title, desc, items = [], light }) {
   return (
     <div className="exp-card">
       <span className="exp-num">{n}</span>
       <div className="exp-card-title">{title}</div>
       {desc ? <p className={light ? "bt" : "exp-desc"} style={{ marginBottom: 12 }}>{desc}</p> : null}
-      {items ? (
+      {items.length > 0 ? (
         <ul className="exp-card-list">
           {items.map((item) => <li key={item}>{item}</li>)}
         </ul>
@@ -70,15 +70,15 @@ export default function KitchenServicesPage() {
       </section>
 
       <section className="sp" style={{ background: "var(--yl-light)" }}>
-        <h2 className="h2">Why Choose Our Kitchen Interior Designers</h2>
+        <h2 className="h2">Why Choose Our Kitchen Interior Design</h2>
         <div className="cards-grid light-cards">
-          <ExpCard light n="01" title="19+ Years Of Kitchen Design Experience" desc="With our experience in Melbourne homes, we can develop kitchen designs that are luxurious, functional, and suit contemporary lifestyles in Australia." />
-          <ExpCard light n="02" title="Luxury Kitchens With Functional Living" desc="We feel that all kitchens should be beautiful, comfortable and functional while enjoying and enhancing modern living and entertaining." />
-          <ExpCard light n="03" title="Tailored Kitchen Design Concepts" desc="All kitchen projects are tailored to the home, lifestyle, eating habits and decorating tastes." />
+          <ExpCard light n="01" title="19+ Years Of Kitchen Design Experience" desc="With our experience in Melbourne homes, we can develop kitchen designs that are luxurious, functional, and suit contemporary lifestyles in Australia." items={["Luxury kitchen interiors","Functional kitchen layouts","Bespoke kitchen concepts","Premium material selections","Space optimisation solutions","Timeless kitchen aesthetics"]} />
+          <ExpCard light n="02" title="Luxury Kitchens With Functional Living" desc="We feel that all kitchens should be beautiful, comfortable and functional while enjoying and enhancing modern living and entertaining." items={["Open-plan kitchen layouts","Smart storage solutions","Integrated appliances","Functional workflow planning","Modern kitchen styling","Elegant lighting concepts"]} />
+          <ExpCard light n="03" title="Tailored Kitchen Design Concepts" desc="All kitchen projects are tailored to the home, lifestyle, eating habits and decorating tastes." items={["Personalised kitchen layouts","Custom cabinetry concepts","Kitchen island planning","Splashback/Benchtop Selection","Luxury colour palettes","Bespoke styling solutions"]} />
         </div>
         <div className="cards-grid-2 light-cards">
-          <ExpCard light n="04" title="Expertise In New Kitchens & Renovations" desc="We undertake kitchen design and installation in new kitchen construction projects and kitchen fit-outs in Melbourne." />
-          <ExpCard light n="05" title="End-To-End Kitchen Interior Design Services" desc="We ensure precision and creativity in every step from consultation to planning to final styling and project coordination." />
+          <ExpCard light n="04" title="Expertise In New Kitchens & Renovations" desc="We undertake kitchen design and installation in new kitchen construction projects and kitchen fit-outs in Melbourne." items={["New kitchen concepts","Kitchen renovations Melbourne","House kitchen interiors","Kitchen extensions","Kitchen upgrades","Modern kitchen remodels"]} />
+          <ExpCard light n="05" title="End-To-End Kitchen Interior Design Services" desc="We ensure precision and creativity in every step from consultation to planning to final styling and project coordination." items={["Kitchen design consultation","Layout and workflow planning","Material and finish selection","Cabinetry and joinery guidance","Lighting and styling concepts","Builder and contractor coordination"]} />
         </div>
       </section>
 
@@ -97,13 +97,13 @@ export default function KitchenServicesPage() {
         <h2 className="h2w">Our Kitchen Interior Design Services Melbourne</h2>
         <p className="dark-intro">Sophisticated and functional kitchens designed for modern family living and contemporary homes.</p>
         <div className="cards-grid">
-          <ExpCard n="01" title="Modern Kitchen Interior Design" />
-          <ExpCard n="02" title="Luxury Kitchens Melbourne" desc="Furniture for the interior of the kitchen, which is made with high-quality materials, stylistic ideas and finishes." />
-          <ExpCard n="03" title="Small Kitchen Interior Design Melbourne" desc="Efficient, attractive kitchen ideas that take advantage of limited areas and enhance their usability and visual appeal." />
+          <ExpCard n="01" title="Modern Kitchen Interior Design" items={["Modern kitchen layouts","Neo classic kitchen design","Minimalist kitchen styling","Functional kitchen storage","Integrated appliance planning","Contemporary kitchen finishes","Modern kitchen lighting"]} />
+          <ExpCard n="02" title="Luxury Kitchens Melbourne" desc="Furniture for the interior of the kitchen, which is made with high-quality materials, stylistic ideas and finishes." items={["Luxury kitchen concepts","High-end cabinetry","Designer kitchen styling","Premium benchtop materials","Custom splashback designs","Luxury kitchen layouts"]} />
+          <ExpCard n="03" title="Small Kitchen Interior Design Melbourne" desc="Efficient, attractive kitchen ideas that take advantage of limited areas and enhance their usability and visual appeal." items={["Small kitchen layouts","Compact storage solutions","Open-space optimisation","Functional cabinetry planning","Minimalist kitchen styling","Small apartment kitchens"]} />
         </div>
         <div className="cards-grid-2">
-          <ExpCard n="04" title="Custom Kitchens Melbourne" desc="Customised kitchen cabinets designed uniquely for your home, living and style." />
-          <ExpCard n="05" title="Commercial & Hospitality Kitchen Design" desc="Ventilation in professional kitchen interiors for cafés, restaurants, hospitality and commercial spaces." />
+          <ExpCard n="04" title="Custom Kitchens Melbourne" desc="Customised kitchen cabinets designed uniquely for your home, living and style." items={["Custom kitchen cabinetry","Bespoke kitchen islands","Tailored storage concepts","Custom joinery solutions","Unique kitchen layouts","Personalised material selections"]} />
+          <ExpCard n="05" title="Commercial & Hospitality Kitchen Design" desc="Ventilation in professional kitchen interiors for cafés, restaurants, hospitality and commercial spaces." items={["Hospitality kitchen concepts","Commercial kitchen layouts","Functional workspace planning","Restaurant kitchen interiors","Workflow optimisation","Commercial kitchen styling"]} />
         </div>
       </section>
 
@@ -286,7 +286,7 @@ export default function KitchenServicesPage() {
 
       <AreasWeServe
         bg="var(--yl-light)"
-        title="Kitchen Designers Serving Melbourne Suburbs"
+        title="Kitchen Design Serving Melbourne Suburbs"
         intro="We offer a range of kitchen interior design Melbourne services throughout the following:"
         outro="The area around Melbourne suburbs."
       />

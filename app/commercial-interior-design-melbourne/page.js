@@ -13,15 +13,17 @@ export const metadata = withPageSeo({
   description: "Commercial interior design in Melbourne for offices, retail, hospitality and showrooms. Create a polished, functional space tailored to your business."
 }, "/commercial-interior-design-melbourne", { image: SERVICE_OG_IMAGE["/commercial-interior-design-melbourne"], imageAlt: fileAlt(SERVICE_OG_IMAGE["/commercial-interior-design-melbourne"]) });
 
-function ExpCard({ n, title, desc, items }) {
+function ExpCard({ n, title, desc, items = [], light }) {
   return (
     <div className="exp-card">
       <span className="exp-num">{n}</span>
       <div className="exp-card-title">{title}</div>
-      {desc ? <p className="exp-desc">{desc}</p> : null}
-      <ul className="exp-card-list">
-        {items.map((item) => <li key={item}>{item}</li>)}
-      </ul>
+      {desc ? <p className={light ? "bt" : "exp-desc"} style={{ marginBottom: 12 }}>{desc}</p> : null}
+      {items.length > 0 ? (
+        <ul className="exp-card-list">
+          {items.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      ) : null}
     </div>
   );
 }
@@ -98,15 +100,15 @@ export default function CommercialServicesPage() {
       </section>
 
       <section className="dark-sp">
-        <h2 className="h2w">Why Businesses Choose Our Commercial Interior Designers</h2>
+        <h2 className="h2w">Why Businesses Choose Our Commercial Interior Design</h2>
         <div className="cards-grid">
-          <ExpCard n="01" title="Unique Commercial Interior Solutions" desc="Each of your commercial projects is tailored to your operations, expectations for customer experience, brand identity and space needs." />
-          <ExpCard n="02" title="Expertise Across Multiple Industries" desc="We have staff at work across all commercial sectors in Melbourne and all are highly experienced." />
-          <ExpCard n="03" title="Modern & Functional Commercial Design" desc="We blend all the practical needs with a high level of design concepts and produce interiors that will be very successful commercially for the long term." />
+          <ExpCard n="01" title="Unique Commercial Interior Solutions" desc="Each of your commercial projects is tailored to your operations, expectations for customer experience, brand identity and space needs." items={["Personalised commercial layouts","Brand-focused interior concepts","Functional workflow planning","Customer experience optimisation","Modern business aesthetics","Practical space utilisation"]} />
+          <ExpCard n="02" title="Expertise Across Multiple Industries" desc="We have staff at work across all commercial sectors in Melbourne and all are highly experienced." items={["Office interiors","Hospitality venues","Retail spaces","Cafés and restaurants","Clinics and wellness areas","Commercial developments"]} />
+          <ExpCard n="03" title="Modern & Functional Commercial Design" desc="We blend all the practical needs with a high level of design concepts and produce interiors that will be very successful commercially for the long term." items={["Practical layouts","Premium finishes","Functional planning","Modern aesthetics","Efficient workflow concepts","Timeless styling principles"]} />
         </div>
         <div className="cards-grid-2">
-          <ExpCard n="04" title="Experienced Commercial Interior Design Firms Melbourne" desc="Our designers have more than 19 years of experience and develop commercial spaces with a professional, welcoming, attractive and very functional appearance." />
-          <ExpCard n="05" title="End-To-End Commercial Interior Design Services" desc="Whether it's a consultation, planning, coordinating the project or styling at the end, we take care of all the details with creativity and accuracy." />
+          <ExpCard n="04" title="Experienced Commercial Interior Design Firms Melbourne" desc="Our designers have more than 19 years of experience and develop commercial spaces with a professional, welcoming, attractive and very functional appearance." items={["Luxury commercial interiors","Professional workspace design","Customer-focused environments","Modern business styling","Commercial space optimisation","Long-term functional solutions"]} />
+          <ExpCard n="05" title="End-To-End Commercial Interior Design Services" desc="Whether it's a consultation, planning, coordinating the project or styling at the end, we take care of all the details with creativity and accuracy." items={["Commercial design consultation","Space planning and layouts","Material and finish selection","Lighting and styling concepts","Builder and contractor coordination","Final commercial styling"]} />
         </div>
       </section>
 
@@ -125,13 +127,13 @@ export default function CommercialServicesPage() {
       <section className="dark-sp">
         <h2 className="h2w">Our Commercial Interior Design Services Melbourne</h2>
         <div className="cards-grid">
-          <ExpCard n="01" title="Commercial Office Interior Design" desc="Create functional and inspiring office interiors to enhance productivity, workflow and employee experience." />
-          <ExpCard n="02" title="Commercial Retail Interior Design" desc="Stylish retail environments to increase customer engagement, visual merchandising and shopping experience." />
-          <ExpCard n="03" title="Hospitality Interior Design Melbourne" desc="Sophisticated interior designs for restaurants, cafes, bars and customer-oriented interiors." />
+          <ExpCard n="01" title="Commercial Office Interior Design" desc="Create functional and inspiring office interiors to enhance productivity, workflow and employee experience." items={["Office layout planning","Inspect reception and meeting areas","Collaborative workspace concepts","Executive office styling","Planning of light and acoustics","Modern workplace interiors"]} />
+          <ExpCard n="02" title="Commercial Retail Interior Design" desc="Stylish retail environments to increase customer engagement, visual merchandising and shopping experience." items={["Retail store layouts","Concept of the display and shelving","Luxury showroom interiors","Customer flow optimisation","Branding integration","Product presentation styling"]} />
+          <ExpCard n="03" title="Hospitality Interior Design Melbourne" desc="Sophisticated interior designs for restaurants, cafes, bars and customer-oriented interiors." items={["Restaurant interior concepts","Café layout planning","Bar / Lounge Styling","Customer seating arrangements","Lighting and ambience design","Functional hospitality layouts"]} />
         </div>
         <div className="cards-grid-2">
-          <ExpCard n="04" title="Commercial Restaurant Interior Design" desc="Modern restaurant interiors that are designed to be functional, atmospheric, comfortable and efficient." />
-          <ExpCard n="05" title="Commercial Shop Interior Design" desc="Brand-integrated commercial interior solutions that create better customer experiences." />
+          <ExpCard n="04" title="Commercial Restaurant Interior Design" desc="Modern restaurant interiors that are designed to be functional, atmospheric, comfortable and efficient." items={["Restaurant seating layouts","Dining space planning","Luxury restaurant styling","Concepts for commercial kitchen flows","Decorative lighting solutions","Hospitality-focused interiors"]} />
+          <ExpCard n="05" title="Commercial Shop Interior Design" desc="Brand-integrated commercial interior solutions that create better customer experiences." items={["Boutique shop layouts","Luxury retail concepts","Display optimisation","Feature wall styling","Lighting coordination","Customer-focused layouts"]} />
         </div>
       </section>
 
@@ -215,7 +217,7 @@ export default function CommercialServicesPage() {
             <p className="bt" style={{ marginTop: 20 }}>Being an experienced commercial interior design firm, we know how to design interiors that boost the business identity, make it more functional, and enhance customer interaction.</p>
           </div>
           <div className="card-dark">
-            <h2>Affordable Interior Designers Melbourne For Commercial Spaces</h2>
+            <h2>Affordable Interior Design Melbourne For Commercial Spaces</h2>
             <p className="lux-intro">Hiring a Melbourne interior designer's solution is not just about the design; it's also about the quality, the function and the professionalism that is expected. We offer a commercial interior solution tailored to fit your project, business needs and investment needs without sacrificing design excellence.</p>
             <span className="lux-label">Whether you need:</span>
             <ul className="ul-dark">
