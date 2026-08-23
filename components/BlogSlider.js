@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import OptImage from "@/components/OptImage";
 import { blogImageAlt, SIZES } from "@/lib/image-alts";
-import { postImageSrc } from "@/lib/cms/public";
+import { postImageSrc } from "@/lib/post-image";
 
 export default function BlogSlider({ items = [] }) {
   const [i, setI] = useState(0);
