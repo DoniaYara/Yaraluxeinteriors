@@ -118,7 +118,7 @@ export default function BathroomServicesPage() {
       <section className="sp" style={{ background: "#fff" }}>
         <div className="two-cards">
           <div className="card-light">
-            <h2>Bathroom Renovation Interior Designer Melbourne Solutions</h2>
+            <h2>Bathroom Renovation Interior Design Melbourne Solutions</h2>
             <p className="bt">A bathroom renovation isn't merely about picking out tile and paint colours. Throughout a professional bathroom renovation, an interior designer Melbourne service is a matter where all the elements of the design play together in perfect harmony.</p>
             <span className="lbl">We assist with:</span>
             <ul className="ul">
