@@ -57,7 +57,7 @@ export default function KitchenServicesPage() {
       <section className="sp" style={{ background: "#fff" }}>
         <div className="ylp-grid">
           <div>
-            <h2 className="h2">Luxury Kitchen Interior Designers Melbourne</h2>
+            <h2 className="h2">Luxury Kitchen Interior Designer Melbourne</h2>
             <p className="bt">Our specialisation at Yara Luxe Interiors is in creating elegant kitchen interior design for contemporary homes in Melbourne. Our team has more than 19 years of experience designing kitchens that are all about functionality, aesthetics, storage efficiency and timeless design principles to improve the way you cook, entertain and live your life every day.</p>
             <p className="bt">Our designers pay attention to detail in every aspect of kitchen design, from layout to cabinetry, splashback to finishes, and everything in between, to ensure your kitchen is a timeless, functional and aesthetically pleasing space.</p>
             <p className="bt">If you are designing new kitchen spaces, remodelling your current kitchen or looking for some innovative kitchen interior design ideas, we provide you with one-on-one solutions which depend on your lifestyle and property objectives.</p>
