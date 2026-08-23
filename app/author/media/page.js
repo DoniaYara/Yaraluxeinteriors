@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { uploadCmsImage } from "@/lib/cms/upload-client";
 
 export default function MediaPage() {
   const [items, setItems] = useState([]);
@@ -16,24 +17,19 @@ export default function MediaPage() {
     setItems(data.media || []);
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    load();
+  }, []);
 
   async function uploadFile(file) {
     if (!file || busy) return;
     setBusy(true);
     setError("");
     try {
-      const form = new FormData();
-      form.append("file", file);
-      form.append("alt", alt);
-      const res = await fetch("/api/author/media", { method: "POST", body: form });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) setError(data.error || "Upload failed.");
-      else {
-        setPendingFile(null);
-        setAlt("");
-        load();
-      }
+      await uploadCmsImage(file, { alt });
+      setPendingFile(null);
+      setAlt("");
+      load();
     } catch (err) {
       setError(err?.message || "Upload failed.");
     } finally {
@@ -86,14 +82,22 @@ export default function MediaPage() {
           {busy ? "Uploading…" : "Upload"}
         </button>
       </div>
-      {pendingFile ? <p className="cms-hint">Selected file: {pendingFile.name}</p> : null}
+      {pendingFile ? (
+        <p className="cms-hint">
+          Selected file: {pendingFile.name} ({Math.round(pendingFile.size / 1024)} KB)
+        </p>
+      ) : null}
       <div className="cms-media-grid">
         {items.map((item) => (
           <div key={item.id} className="cms-media-card">
             <img src={item.url} alt={item.alt || item.filename} />
             <input defaultValue={item.alt} onBlur={(e) => saveAlt(item.id, e.target.value)} placeholder="Alt text" />
-            <button type="button" className="cms-btn ghost" onClick={() => navigator.clipboard.writeText(item.url)}>Copy URL</button>
-            <button type="button" className="cms-btn danger" onClick={() => remove(item.id)}>Delete</button>
+            <button type="button" className="cms-btn ghost" onClick={() => navigator.clipboard.writeText(item.url)}>
+              Copy URL
+            </button>
+            <button type="button" className="cms-btn danger" onClick={() => remove(item.id)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>
