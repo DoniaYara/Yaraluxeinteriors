@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { U } from "@/lib/data";
 import OptImage from "@/components/OptImage";
 import { blogImageAlt, SIZES } from "@/lib/image-alts";
+import { postImageSrc } from "@/lib/cms/public";
 
 export default function BlogSlider({ items = [] }) {
   const [i, setI] = useState(0);
@@ -30,8 +30,8 @@ export default function BlogSlider({ items = [] }) {
           {items.map((p) => (
             <article className="blog-slide" key={p.slug || p.title}>
               <div className="blog-slide-media">
-                <OptImage src={`${U}/${p.img}`} alt={blogImageAlt(p)} sizes={SIZES.blogCard} />
-                <div className="blog-slide-cats">{p.cats.join(" ")}</div>
+                <OptImage src={postImageSrc(p)} alt={blogImageAlt(p)} sizes={SIZES.blogCard} />
+                <div className="blog-slide-cats">{(p.cats || []).join(" ")}</div>
               </div>
               <div className="blog-slide-body">
                 <div className="blog-slide-meta">
