@@ -68,7 +68,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="sp" style={{ background: "var(--yl-light)" }}>
-        <h2 className="h2">What Makes Our Residential Interior Designers Special</h2>
+        <h2 className="h2">What Makes Our Residential Interior Design Special</h2>
         <div className="cards-grid light-cards">
           <ExpCard light n="01" title="19+ Years Of Residential Design Experience" desc="Nearly two decades designing beautiful, thoughtful, functional and contemporary interiors for Melbourne homes across Australia." items={["Luxury residential interiors","Custom home design ideas","Apartment & townhouse interiors","Functional space planning","Premium styling solutions","Timeless interior aesthetics"]} />
           <ExpCard light n="02" title="Luxury Interiors With Functional Living" desc="We believe every space in the home should be accessible, comfortable, contemporary and beautiful — without compromising on function." items={["Open-plan living concepts","Practical furniture layouts","Elegant material selections","Warm & cosy interiors","Modern luxury styling","Comfortable living environments"]} />
