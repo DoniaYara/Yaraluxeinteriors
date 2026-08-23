@@ -11,13 +11,16 @@ import {
 function Stars({ rating }) {
   const value = Number(rating) || 0;
   return (
-    <span className="ggl-stars" aria-label={`${value} out of 5 stars`}>
-      {Array.from({ length: 5 }, (_, i) => (
-        <span key={i} className={i < value ? "on" : ""} aria-hidden="true">
-          ★
-        </span>
-      ))}
-    </span>
+    <>
+      <span className="ggl-stars" aria-hidden="true">
+        {Array.from({ length: 5 }, (_, i) => (
+          <span key={i} className={i < value ? "on" : ""}>
+            ★
+          </span>
+        ))}
+      </span>
+      <span className="sr-only">{`${value} out of 5 stars`}</span>
+    </>
   );
 }
 
@@ -169,18 +172,18 @@ export default function HomeGoogleReviews() {
           </button>
         </div>
 
-        <div className="home-ggl-nav" role="tablist" aria-label="Google review pages">
+        <nav className="home-ggl-nav" aria-label="Google review pages">
           {Array.from({ length: pages }, (_, n) => (
             <button
               key={n}
               type="button"
               className={n === i ? "on" : ""}
-              aria-label={`Google reviews page ${n + 1}`}
-              aria-current={n === i ? "true" : undefined}
+              aria-label={`Show review page ${n + 1}`}
+              aria-current={n === i ? "page" : undefined}
               onClick={() => setI(n)}
             />
           ))}
-        </div>
+        </nav>
       </div>
     </section>
   );

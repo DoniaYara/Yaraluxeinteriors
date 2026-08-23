@@ -9,20 +9,11 @@ import { SIZES } from "@/lib/image-alts";
 const FILTERS = ["All", "Decor", "Furniture", "Interior", "Exterior"];
 const HOME_FILTERS = ["All", "Decor", "Exterior", "Furniture", "Interior"];
 
-function Plus() {
-  return (
-    <svg className="ot-plus" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" strokeWidth="1.4" />
-    </svg>
-  );
-}
-
 export default function PortfolioMetro({
   filters = FILTERS,
   gridClass = "projects-grid pf_5_cols style-2 w-auto",
   limit,
-  href = "",
-  overlayPlus = false
+  href = ""
 }) {
   const [filter, setFilter] = useState("All");
   const list = PROJECTS.map(asProject);
@@ -56,13 +47,13 @@ export default function PortfolioMetro({
           const inner = (
             <div className="projects-box">
               <div className="projects-thumbnail">
-                <OptImage src={`${U}/${p.thumb || p.img}`} alt={p.title} width={720} height={720} sizes={SIZES.portfolio} />
-                {overlayPlus ? (
-                  <span className="overlay">
-                    <h5>{p.title}</h5>
-                    <Plus />
-                  </span>
-                ) : null}
+                <OptImage
+                  src={`${U}/${p.thumb || p.img}`}
+                  alt={p.title}
+                  width={720}
+                  height={720}
+                  sizes={SIZES.portfolio}
+                />
               </div>
               <div className="portfolio-info">
                 <div className="portfolio-info-inner">

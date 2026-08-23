@@ -2,7 +2,7 @@ const WA_HREF = "https://wa.me/61433211875";
 
 export default function FloatingActions() {
   return (
-    <div className="float-actions" aria-label="Quick actions">
+    <nav className="float-actions" aria-label="Quick actions">
       <a
         href={WA_HREF}
         className="float-btn float-wa"
@@ -22,6 +22,6 @@ export default function FloatingActions() {
           <path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
       </a>
-    </div>
+    </nav>
   );
 }

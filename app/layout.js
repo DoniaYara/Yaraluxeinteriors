@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
       <body>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){function u(){var y=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.toggle("show-back-top",y>120);}u();window.addEventListener("scroll",u,{passive:true,capture:true});})();`
+            __html: `(function(){try{if("scrollRestoration" in history)history.scrollRestoration="manual";}catch(e){}var n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];if(n&&(n.type==="reload"||n.type==="navigate"))window.scrollTo(0,0);function u(){var y=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.toggle("show-back-top",y>120);document.documentElement.classList.toggle("is-scrolled",y>16);}u();window.addEventListener("scroll",u,{passive:true,capture:true});window.addEventListener("load",u);window.addEventListener("pageshow",u);})();`
           }}
         />
         <AppShell>{children}</AppShell>

@@ -49,7 +49,7 @@ const AREA_FOOTER = [
 function SocialIcon({ href, label, children }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-      {children}
+      <span aria-hidden="true">{children}</span>
     </a>
   );
 }
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           <nav className="footer-col" aria-label="Quick links">
-            <h6>Quick Links</h6>
+            <h2 className="footer-heading">Quick Links</h2>
             <ul>
               {QUICK_LINKS.map((item) => (
                 <li key={item.href}>
@@ -81,7 +81,7 @@ export default function Footer() {
           </nav>
 
           <nav className="footer-col" aria-label="Services">
-            <h6>Services</h6>
+            <h2 className="footer-heading">Services</h2>
             <ul>
               {SERVICE_FOOTER.map((item) => (
                 <li key={item.href}>
@@ -92,7 +92,7 @@ export default function Footer() {
           </nav>
 
           <div className="footer-col footer-contact">
-            <h6>Contact</h6>
+            <h2 className="footer-heading">Contact</h2>
             <p>
               <a href={MAPS} target="_blank" rel="noopener noreferrer">{ADDRESS}</a>
             </p>
@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
 
         <nav className="footer-areas" aria-label="Areas we serve">
-          <h6>Areas We Serve</h6>
+          <h2 className="footer-heading">Areas We Serve</h2>
           <ul>
             {AREA_FOOTER.map((name) => (
               <li key={name}>

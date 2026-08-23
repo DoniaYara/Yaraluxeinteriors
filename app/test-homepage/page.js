@@ -161,7 +161,6 @@ export default function TestHomePage() {
           gridClass="projects-grid pf_4_cols style-1 img-scale w-auto"
           limit={12}
           href="/portfolio"
-          overlayPlus
         />
         <div className="center mt-40">
           <Link className="octf-btn octf-btn-light" href="/portfolio">all Projects</Link>

@@ -21,6 +21,7 @@ import OptImage from "@/components/OptImage";
 import { fileAlt, SIZES } from "@/lib/image-alts";
 import {
   HOME_BLOG_BG,
+  HOME_CTA,
   HOME_FEATURE_BG,
   HOME_PORTFOLIO_BG,
   U
@@ -62,7 +63,7 @@ export default async function HomePage() {
                 <OptImage src={`${U}/${f.img}`} alt={fileAlt(f.img)} sizes={SIZES.feature} />
               </div>
               <div className="features-content" style={{ backgroundImage: `url('${HOME_FEATURE_BG}')` }}>
-                <h6><span>{f.n}</span> {f.title}</h6>
+                <p className="feature-title"><span>{f.n}</span> {f.title}</p>
               </div>
             </article>
           ))}
@@ -86,7 +87,6 @@ export default async function HomePage() {
           gridClass="projects-grid pf_4_cols style-1 img-scale w-auto"
           limit={12}
           href="/portfolio"
-          overlayPlus
         />
         <div className="center mt-40">
           <Link className="octf-btn octf-btn-light" href="/portfolio">View All Projects</Link>
@@ -117,11 +117,23 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="cta" style={{ backgroundImage: `url('${HOME_CTA}')` }}>
+        <div className="cta-inner">
+          <h2>Your Dream Home</h2>
+          <p>You deserve a space that not only looks beautiful, but truly functional,</p>
+          <p>A Design That Loves You Back!</p>
+          <div className="mt-40 ot-button">
+            <Link className="octf-btn octf-btn-light" href="/contact">Book a Free Consultation</Link>
+          </div>
+        </div>
+      </section>
+
       <HomeProcess />
       <HomeAreas />
       <HomeGoogleReviews />
-      <HomePartners />
       <HomeFaq />
+
+      <HomePartners />
 
       <section className="home-blog" style={{ backgroundImage: `url('${HOME_BLOG_BG}')` }}>
         <div className="container">

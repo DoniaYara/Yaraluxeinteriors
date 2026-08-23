@@ -10,10 +10,26 @@ export function HomeHero() {
   return (
     <div className="ylp">
       <section className="hero" aria-label="Luxury interior designer Melbourne">
-        <video className="hero-desk" autoPlay muted loop playsInline poster={`${U}/2025/06/How-to-Layer-Light-Like-a-Designer-.jpg`}>
+        <video
+          className="hero-desk"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={`${U}/2025/06/How-to-Layer-Light-Like-a-Designer-.jpg`}
+        >
           <source src={`${U}/2025/07/NEW-video-for-DESKTOP.mp4`} type="video/mp4" />
         </video>
-        <video className="hero-mob" autoPlay muted loop playsInline poster={`${U}/2025/06/How-to-Layer-Light-Like-a-Designer-.jpg`}>
+        <video
+          className="hero-mob"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={`${U}/2025/06/How-to-Layer-Light-Like-a-Designer-.jpg`}
+        >
           <source src={`${U}/2025/07/NEW-video-for-MOBILE.mp4`} type="video/mp4" />
         </video>
         <div className="hero-overlay" />
@@ -67,7 +83,7 @@ export function HomeServices({
 }) {
   return (
     <div className="ylp">
-      <section className="sp test-home-services" id="services" style={{ background: "var(--yl-light)" }}>
+      <section className="sp test-home-services" id="services" style={{ background: "#1A1A1A" }}>
         <h2 className="h2">{heading}</h2>
         <p className="bt">{intro}</p>
         <div className="svc-cards svc-cards-final">

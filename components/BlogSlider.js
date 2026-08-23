@@ -38,20 +38,27 @@ export default function BlogSlider({ items = [] }) {
                   <span>{p.date}</span>
                   <span>Donia Yara</span>
                 </div>
-                <h5>
+                <h3 className="blog-slide-title">
                   <Link href={p.slug ? `/blog/${p.slug}` : "/blog"}>{p.title}</Link>
-                </h5>
+                </h3>
                 <p>{p.excerpt}</p>
               </div>
             </article>
           ))}
         </div>
       </div>
-      <div className="quote-nav">
+      <nav className="quote-nav" aria-label="Blog pages">
         {Array.from({ length: pages }, (_, n) => (
-          <button key={n} type="button" className={n === i ? "on" : ""} onClick={() => setI(n)} aria-label={`Blog page ${n + 1}`} />
+          <button
+            key={n}
+            type="button"
+            className={n === i ? "on" : ""}
+            onClick={() => setI(n)}
+            aria-label={`Show blog page ${n + 1}`}
+            aria-current={n === i ? "page" : undefined}
+          />
         ))}
-      </div>
+      </nav>
     </div>
   );
 }
