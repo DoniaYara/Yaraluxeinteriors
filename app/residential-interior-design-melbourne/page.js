@@ -282,7 +282,7 @@ export default function ServicesPage() {
 
       <AreasWeServe
         bg="var(--yl-light)"
-        title="Residential Interior Designers Serving Melbourne Suburbs"
+        title="Residential Interior Design Serving Melbourne Suburbs"
         intro="We proudly deliver interior design Melbourne services across the top residential suburbs, including the following:"
         items={[["Toorak","3142"],["Brighton","3186"],["Brighton East","3187"],["South Yarra","3141"],["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Kew","3101"],["Hawthorn","3122"],["Camberwell","3124"],["Canterbury","3126"],["Balwyn","3103"],["Balwyn North","3104"],["Mont Albert","3127"],["Templestowe","3106"],["Albert Park","3206"],["Elwood","3184"]]}
         outro="Our design style aligns with the interior design trends of the contemporary Australian home across Melbourne and the surrounding premium residential markets."
