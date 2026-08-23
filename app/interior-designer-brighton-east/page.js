@@ -97,8 +97,8 @@ export default function BrightonEastPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Brighton East"
         intro="Yara Luxe's interior design services, in addition to Brighton East 3187, cover Melbourne's inner eastern and bayside suburbs, including:"
-        items={[["Brighton","3186"],["Hampton","3188"],["Hampton East","3188"],["Elwood","3184"],["St Kilda","3182"],["Albert Park","3206"],["Caulfield","3162"],["Malvern","3144"],["Armadale","3143"],["Toorak","3142"],["South Yarra","3141"],["Bentleigh","3204"]]}
       />
 
       <LocationFaqCta

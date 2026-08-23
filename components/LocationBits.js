@@ -3,7 +3,15 @@ import FaqList from "@/components/FaqList";
 import BookingBar from "@/components/BookingBar";
 import HomeGoogleReviews from "@/components/HomeGoogleReviews";
 import { MAP_EMBED } from "@/lib/data";
+import { LOCATIONS } from "@/lib/schema/location-service";
 import { AREA_URLS, RESIDENTIAL_SERVICE_KEYS, SERVICE_LINKS, SERVICE_URLS } from "@/lib/urls";
+
+/** Same suburbs as the homepage — only location pages that exist. */
+export function getPublishedAreaItems(excludeSuburb = "") {
+  return LOCATIONS.filter(
+    (loc) => AREA_URLS[loc.suburb] && loc.suburb !== excludeSuburb
+  ).map((loc) => [loc.suburb, loc.postcode]);
+}
 
 export function LocationHero({ eyebrow, title, desc }) {
   return (
@@ -27,39 +35,32 @@ export function LocationHero({ eyebrow, title, desc }) {
   );
 }
 
-export function AreasWeServe({ title = "Areas We Serve", intro, items, bg = "#fff", outro }) {
+export function AreasWeServe({
+  title = "Areas We Serve",
+  intro,
+  excludeSuburb = "",
+  bg = "#fff",
+  outro
+}) {
+  const items = getPublishedAreaItems(excludeSuburb);
+
   return (
     <section className="sp" style={{ background: bg }}>
       <div className="sec-center">
         <h2 className="h2">{title}</h2>
-        <p className="bt" style={{ maxWidth: 700 }}>{intro}</p>
+        {intro ? <p className="bt" style={{ maxWidth: 700 }}>{intro}</p> : null}
       </div>
       <div className="areas-layout">
         <div className="map-wrap">
           <iframe src={MAP_EMBED} title="Yara Luxe Interiors map" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
         </div>
         <div className="areas-grid">
-          {items.map(([name, post]) => {
-            const href = AREA_URLS[name];
-            const content = (
-              <>
-                <span className="an">{name}</span>
-                <span className="ap">{post}</span>
-              </>
-            );
-            if (href) {
-              return (
-                <Link className="area-item" href={href} key={name + post}>
-                  {content}
-                </Link>
-              );
-            }
-            return (
-              <div className="area-item" key={name + post}>
-                {content}
-              </div>
-            );
-          })}
+          {items.map(([name, post]) => (
+            <Link className="area-item" href={AREA_URLS[name]} key={name}>
+              <span className="an">{name}</span>
+              <span className="ap">{post}</span>
+            </Link>
+          ))}
         </div>
       </div>
       {outro ? <p className="bt" style={{ marginTop: 32 }}>{outro}</p> : null}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import FaqList from "@/components/FaqList";
-import { LocationServiceLinks } from "@/components/LocationBits";
+import { AreasWeServe, LocationServiceLinks } from "@/components/LocationBits";
 import { U } from "@/lib/data";
 import { locationPageGraph } from "@/lib/schema";
 import { AREA_URLS, SERVICE_URLS } from "@/lib/urls";
@@ -153,6 +153,12 @@ export default function HawthornPage() {
           </div>
         </div>
       </section>
+
+      <AreasWeServe
+        excludeSuburb="Hawthorn"
+        title="Areas We Serve"
+        intro="Based in Melbourne's inner east, we also design homes across these suburbs:"
+      />
 
       <LocationServiceLinks />
 

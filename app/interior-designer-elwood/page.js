@@ -128,8 +128,8 @@ export default function ElwoodPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Elwood"
         intro="Yara Luxe has its offices in Elwood 3184 and provides services to clients across Melbourne's bayside and inner-city suburbs, including:"
-        items={[["St Kilda","3182"],["Brighton","3186"],["Middle Park","3206"],["Albert Park","3206"],["Port Melbourne","3207"],["South Melbourne","3205"],["South Yarra","3141"],["Prahran","3181"],["Armadale","3143"],["Malvern","3144"],["Toorak","3142"],["Caulfield","3162"]]}
       />
 
       <LocationFaqCta

@@ -107,7 +107,7 @@
   position: absolute;
   inset: 0;
   background: #1A1A1A;
-  opacity: 0.5;
+  opacity: 0.32;
   z-index: 1;
 }
 .ylp .hero-content { position: relative; z-index: 2; max-width: 860px; }
@@ -371,9 +371,9 @@
   background-size: cover;
   background-position: center;
   z-index: 0;
-  opacity: 0.18;
+  opacity: 0.45;
 }
-.ylp .cta-overlay { position: absolute; inset: 0; background: rgba(15,13,11,0.82); z-index: 1; }
+.ylp .cta-overlay { position: absolute; inset: 0; background: rgba(15,13,11,0.48); z-index: 1; }
 .ylp .cta-content { position: relative; z-index: 2; padding: 90px 60px; width: 100%; }
 .ylp .cta-content h2 {
   font-family: var(--yl-serif);

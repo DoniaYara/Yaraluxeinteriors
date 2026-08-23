@@ -70,13 +70,13 @@ export default function ServicesPage() {
       <section className="sp" style={{ background: "var(--yl-light)" }}>
         <h2 className="h2">What Makes Our Residential Interior Design Special</h2>
         <div className="cards-grid light-cards">
-          <ExpCard light n="01" title="19+ Years Of Residential Design Experience" desc="Nearly two decades designing beautiful, thoughtful, functional and contemporary interiors for Melbourne homes across Australia." items={["Luxury residential interiors","Custom home design ideas","Apartment & townhouse interiors","Functional space planning","Premium styling solutions","Timeless interior aesthetics"]} />
-          <ExpCard light n="02" title="Luxury Interiors With Functional Living" desc="We believe every space in the home should be accessible, comfortable, contemporary and beautiful — without compromising on function." items={["Open-plan living concepts","Practical furniture layouts","Elegant material selections","Warm & cosy interiors","Modern luxury styling","Comfortable living environments"]} />
-          <ExpCard light n="03" title="Tailored Design Concepts" desc="Each project is designed to suit your property type, living requirements, space functions and vision for the future — so spaces feel truly yours." items={["Personalised design direction","Custom colour palettes","Furniture & decor styling","Bespoke interior concepts","Lifestyle-focused layouts","Cohesive room-to-room flow"]} />
+          <ExpCard light n="01" title="19+ Years Of Residential Design Experience" desc="Nearly two decades designing beautiful, thoughtful, functional and contemporary interiors for Melbourne homes across Australia." />
+          <ExpCard light n="02" title="Luxury Interiors With Functional Living" desc="We believe every space in the home should be accessible, comfortable, contemporary and beautiful — without compromising on function." />
+          <ExpCard light n="03" title="Tailored Design Concepts" desc="Each project is designed to suit your property type, living requirements, space functions and vision for the future — so spaces feel truly yours." />
         </div>
         <div className="cards-grid-2 light-cards">
-          <ExpCard light n="04" title="Expertise In New Builds & Existing Homes" desc="We work on new construction projects as well as existing homes, designing interiors that are cohesive, elegant and highly functional." items={["Luxury new homes","Apartment interiors","Townhouse projects","Custom residential builds","Home transformations","Contemporary family homes"]} />
-          <ExpCard light n="05" title="End-To-End Interior Design Solutions" desc="We coordinate every step from consultation to concept development, styling and project coordination — with creativity, accuracy and attention to detail." items={["Interior design consultation","Space planning & layouts","Material & finish selection","Lighting & styling concepts","Builder & contractor coordination","Final interior styling"]} />
+          <ExpCard light n="04" title="Expertise In New Builds & Existing Homes" desc="We work on new construction projects as well as existing homes, designing interiors that are cohesive, elegant and highly functional." />
+          <ExpCard light n="05" title="End-To-End Interior Design Solutions" desc="We coordinate every step from consultation to concept development, styling and project coordination — with creativity, accuracy and attention to detail." />
         </div>
       </section>
 
@@ -96,14 +96,14 @@ export default function ServicesPage() {
         <h2 className="h2w">Our Residential Interior Design Services</h2>
         <p className="dark-body">Sophisticated, functional interiors designed for modern family living and contemporary homes across Melbourne.</p>
         <div className="cards-grid">
-          <ExpCard n="01" title="Full Home Interior Design" desc="Complete interior solutions that offer seamless flow and coherence across the entire home." items={["Whole-home design concepts","Furniture & decor styling","Colour palette coordination","Open-plan layout planning","Luxury material selections","Lighting & finish consultation"]} />
-          <ExpCard n="02" title="Living Room Interior Design" desc="Well-planned, inviting living areas to entertain, relax and live a modern life." items={["Furniture layouts","Feature wall concepts","Decorative styling","Lighting placement","Texture layering","Modern living concepts"]} />
-          <ExpCard n="03" title="Bedroom Interior Design" desc="Elegant bedroom interiors that feel comfortable, relaxing and luxurious." items={["Master bedroom styling","Wardrobe planning","Soft furnishing selections","Mood lighting concepts","Luxury finishes","Space optimisation"]} />
+          <ExpCard n="01" title="Full Home Interior Design" desc="Complete interior solutions that offer seamless flow and coherence across the entire home." />
+          <ExpCard n="02" title="Living Room Interior Design" desc="Well-planned, inviting living areas to entertain, relax and live a modern life." />
+          <ExpCard n="03" title="Bedroom Interior Design" desc="Elegant bedroom interiors that feel comfortable, relaxing and luxurious." />
         </div>
         <div className="cards-grid">
-          <ExpCard n="04" title="Kitchen Interior Design" desc="Modern kitchen interiors that merge functionality, beauty and everyday living." items={["Kitchen layout planning","Cabinetry concepts","Luxury finishes","Material selection","Lighting coordination","Storage optimisation"]} />
-          <ExpCard n="05" title="Bathroom Interior Design" desc="Elegant bathroom interiors that create a calm, functional and luxurious atmosphere." items={["Bathroom styling concepts","Vanity & fixture selection","Tile & tiling consultation","Lighting placement","Space-saving layouts","Contemporary aesthetics"]} />
-          <ExpCard n="06" title="Residential Building Interior Design" desc="Stylish, smart interiors for houses, townhouses and contemporary housing estates." items={["Compact space planning","House furniture layouts","Urban interior styling","Functional storage solutions","Contemporary living concepts","Luxury apartment interiors"]} />
+          <ExpCard n="04" title="Kitchen Interior Design" desc="Modern kitchen interiors that merge functionality, beauty and everyday living." />
+          <ExpCard n="05" title="Bathroom Interior Design" desc="Elegant bathroom interiors that create a calm, functional and luxurious atmosphere." />
+          <ExpCard n="06" title="Residential Building Interior Design" desc="Stylish, smart interiors for houses, townhouses and contemporary housing estates." />
         </div>
       </section>
 
@@ -284,7 +284,6 @@ export default function ServicesPage() {
         bg="var(--yl-light)"
         title="Residential Interior Design Serving Melbourne Suburbs"
         intro="We proudly deliver interior design Melbourne services across the top residential suburbs, including the following:"
-        items={[["Toorak","3142"],["Brighton","3186"],["Brighton East","3187"],["South Yarra","3141"],["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Kew","3101"],["Hawthorn","3122"],["Camberwell","3124"],["Canterbury","3126"],["Balwyn","3103"],["Balwyn North","3104"],["Mont Albert","3127"],["Templestowe","3106"],["Albert Park","3206"],["Elwood","3184"]]}
         outro="Our design style aligns with the interior design trends of the contemporary Australian home across Melbourne and the surrounding premium residential markets."
       />
 

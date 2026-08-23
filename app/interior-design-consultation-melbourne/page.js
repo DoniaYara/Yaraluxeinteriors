@@ -23,13 +23,6 @@ function ExpCard({ n, title, desc }) {
   );
 }
 
-const MELBOURNE_AREAS = [
-  ["Toorak","3142"],["Brighton","3186"],["Balwyn","3103"],["Canterbury","3126"],
-  ["South Yarra","3141"],["Kew","3101"],["Hawthorn","3122"],["Balwyn North","3104"],
-  ["Camberwell","3124"],["Mont Albert","3127"],["Albert Park","3206"],["Elwood","3184"],
-  ["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Templestowe","3106"],["Brighton East","3187"]
-];
-
 export default function ConsultationServicesPage() {
   return (
     <div className="ylp svc-cons">
@@ -242,7 +235,6 @@ export default function ConsultationServicesPage() {
         title="Areas We Serve Across Melbourne"
         intro="Yara Luxe is proud to offer interior design consultation Melbourne services to Melbourne's premium neighbourhoods, such as the following:"
         outro="In-home and virtual consultation services are available to you per your property, design objectives and lifestyle."
-        items={MELBOURNE_AREAS}
       />
 
       <LocationFaqCta

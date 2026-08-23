@@ -99,9 +99,9 @@ export default function TemplestowePage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Templestowe"
         title="Areas We Serve"
         intro="In addition to Templestowe 3106, Yara Luxe works with homeowners throughout Melbourne's eastern and north-eastern suburbs, including:"
-        items={[["Templestowe Lower",""],["Doncaster",""],["Doncaster East",""],["Balwyn North","3104"],["Bulleen",""],["Kew","3101"],["Ivanhoe",""],["Heidelberg",""],["Mont Albert","3127"],["Surrey Hills",""],["Camberwell","3124"],["Warrandyte",""]]}
       />
 
       <LocationFaqCta

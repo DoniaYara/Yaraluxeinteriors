@@ -109,8 +109,8 @@ export default function ArmadalePage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Armadale"
         intro="Interior design services are available for Armadale 3143, as well as luxurious inner-east and bayside suburbs including:"
-        items={[["Toorak","3142"],["South Yarra","3141"],["Malvern","3144"],["Prahran","3181"],["Hawksburn","3142"],["Glen Iris","3146"],["Caulfield","3162"],["Albert Park","3206"],["Brighton","3186"],["Kew","3101"],["Hawthorn","3122"],["Camberwell","3124"]]}
       />
 
       <LocationFaqCta

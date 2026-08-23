@@ -160,9 +160,9 @@ export default function BrightonPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Brighton"
         title="Serving Brighton 3186 & Surrounding Bayside Suburbs"
         intro="Yaraluxe proudly works with homeowners throughout the following:"
-        items={[["Brighton","3186"],["Brighton East","3187"],["Hampton","3188"],["Sandringham","3191"],["Elwood","3184"],["Albert Park","3206"],["Toorak","3142"],["South Yarra","3141"],["Armadale","3143"],["Malvern","3144"]]}
       />
 
       <LocationFaqCta

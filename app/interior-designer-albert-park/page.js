@@ -133,8 +133,8 @@ export default function AlbertParkPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Albert Park"
         intro="Yara Luxe offers interior design services in Albert Park 3206 and the following Melbourne areas:"
-        items={[["South Melbourne","3205"],["Port Melbourne","3207"],["Middle Park","3206"],["St Kilda","3182"],["South Yarra","3141"],["Toorak","3142"],["Prahran","3181"],["Armadale","3143"],["Malvern","3144"],["Richmond","3121"],["Hawthorn","3122"],["Kew","3101"]]}
       />
 
       <LocationFaqCta

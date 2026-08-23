@@ -194,9 +194,9 @@ export default function BalwynPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Balwyn"
         title="Areas Near Balwyn 3103 We Also Serve"
         intro="Yaraluxe proudly works with homeowners throughout Melbourne's eastern suburbs, including the following:"
-        items={[["Balwyn North","3104"],["Canterbury","3126"],["Kew","3101"],["Hawthorn","3122"],["Camberwell","3124"],["Mont Albert","3127"],["Templestowe","3106"],["Toorak","3142"],["South Yarra","3141"],["Brighton","3186"]]}
       />
 
       <LocationFaqCta

@@ -198,9 +198,9 @@ export default function CanterburyPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Canterbury"
         title="Around Canterbury We Also Serve"
         intro="Yaraluxe is available for homeowners in Melbourne's prestigious eastern suburbs, such as the following:"
-        items={[["Balwyn","3103"],["Balwyn North","3104"],["Kew","3101"],["Hawthorn","3122"],["Camberwell","3124"],["Mont Albert","3127"],["Templestowe","3106"],["Toorak","3142"],["South Yarra","3141"],["Brighton","3186"],["Brighton East","3187"],["Armadale","3143"],["Malvern","3144"]]}
       />
 
       <LocationFaqCta

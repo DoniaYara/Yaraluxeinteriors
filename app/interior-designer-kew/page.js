@@ -1,5 +1,5 @@
 import JsonLd from "@/components/JsonLd";
-import { LocationFaqCta, LocationHero } from "@/components/LocationBits";
+import { AreasWeServe, LocationFaqCta, LocationHero } from "@/components/LocationBits";
 import { U } from "@/lib/data";
 import { locationPageGraph } from "@/lib/schema";
 import { withPageSeo } from "@/lib/seo";
@@ -145,6 +145,12 @@ export default function KewPage() {
           </div>
         </div>
       </section>
+
+      <AreasWeServe
+        excludeSuburb="Kew"
+        title="Areas We Serve"
+        intro="Alongside Kew 3101, Yara Luxe provides interior design across Melbourne's inner east, bayside and surrounding suburbs:"
+      />
 
       <LocationFaqCta
         faqs={[

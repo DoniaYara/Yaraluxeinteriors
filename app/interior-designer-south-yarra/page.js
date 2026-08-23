@@ -1,5 +1,5 @@
 import JsonLd from "@/components/JsonLd";
-import { LocationFaqCta, LocationHero } from "@/components/LocationBits";
+import { AreasWeServe, LocationFaqCta, LocationHero } from "@/components/LocationBits";
 import { U } from "@/lib/data";
 import { locationPageGraph } from "@/lib/schema";
 import { withPageSeo } from "@/lib/seo";
@@ -187,6 +187,12 @@ export default function SouthYarraPage() {
           <OptImage src={`${U}/2026/06/commercial-office-interior-design.webp`} alt={fileAlt("2026/06/commercial-office-interior-design.webp")} sizes={SIZES.contentCol} />
         </div>
       </section>
+
+      <AreasWeServe
+        excludeSuburb="South Yarra"
+        title="Areas We Serve"
+        intro="Alongside South Yarra 3141, Yara Luxe provides interior design across Melbourne's inner east, bayside and surrounding suburbs:"
+      />
 
       <LocationFaqCta
         includeCommercial={true}

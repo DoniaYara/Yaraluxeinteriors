@@ -112,9 +112,9 @@ export default function MalvernPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Malvern"
         title="Areas We Serve"
         intro="Yara Luxe also serves the inner-east and south-east Melbourne suburbs such as:"
-        items={[["Armadale","3143"],["Toorak","3142"],["South Yarra","3141"],["Glen Iris",""],["Prahran","3181"],["Caulfield",""],["Hawthorn","3122"],["Kew","3101"],["Camberwell","3124"],["Balwyn","3103"],["Brighton","3186"],["Elwood","3184"]]}
       />
 
       <LocationFaqCta

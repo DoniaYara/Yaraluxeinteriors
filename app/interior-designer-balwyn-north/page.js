@@ -106,9 +106,9 @@ export default function BalwynNorthPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Balwyn North"
         title="Areas We Serve"
         intro="Apart from Balwyn North 3104, Yara Luxe offers interior design services to all areas of Melbourne's eastern and inner eastern suburbs, including:"
-        items={[["Balwyn","3103"],["Kew","3101"],["Hawthorn","3122"],["Hawthorn East",""],["Canterbury","3126"],["Camberwell","3124"],["Deepdene",""],["Surrey Hills",""],["Mont Albert","3127"],["Toorak","3142"],["South Yarra","3141"],["Glen Iris",""],["Malvern","3144"]]}
       />
 
       <LocationFaqCta

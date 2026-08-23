@@ -114,9 +114,9 @@ export default function MontAlbertPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Mont Albert"
         title="Areas We Serve"
         intro="Yara Luxe's interior design services are complimentary and can be utilized in the eastern and inner-eastern suburbs of Melbourne, along with Mont Albert 3127."
-        items={[["Surrey Hills",""],["Balwyn","3103"],["Balwyn North","3104"],["Camberwell","3124"],["Canterbury","3126"],["Kew","3101"],["Hawthorn","3122"],["Hawthorn East",""],["Deepdene",""],["Glen Iris",""],["Malvern","3144"],["South Yarra","3141"]]}
       />
 
       <LocationFaqCta

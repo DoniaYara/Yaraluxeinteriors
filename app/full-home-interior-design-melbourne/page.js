@@ -23,13 +23,6 @@ function ExpCard({ n, title, desc }) {
   );
 }
 
-const MELBOURNE_AREAS = [
-  ["Toorak","3142"],["Brighton","3186"],["Balwyn","3103"],["Canterbury","3126"],
-  ["South Yarra","3141"],["Kew","3101"],["Hawthorn","3122"],["Balwyn North","3104"],
-  ["Camberwell","3124"],["Mont Albert","3127"],["Albert Park","3206"],["Elwood","3184"],
-  ["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Templestowe","3106"],["Brighton East","3187"]
-];
-
 export default function FullHomeServicesPage() {
   return (
     <div className="ylp svc-fh">
@@ -303,7 +296,6 @@ export default function FullHomeServicesPage() {
         title="Service Areas throughout Melbourne"
         intro="Yara Luxe are proud to offer full home interior design Melbourne services throughout Melbourne's premium residential neighbourhoods, such as:"
         outro="From luxurious interiors to modern designs and comprehensive home makeovers, Yara Luxe offers personalised interior design solutions for your home and lifestyle."
-        items={MELBOURNE_AREAS}
       />
 
       <LocationFaqCta

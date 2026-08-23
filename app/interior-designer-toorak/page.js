@@ -216,9 +216,9 @@ export default function ToorakPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Toorak"
         title="Interior Designer Near Toorak 3142"
         intro="Toorak is part of the services that Yaraluxe offers for interior design in Melbourne's exclusive eastern and bayside suburbs."
-        items={[["South Yarra","3141"],["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Brighton","3186"],["Brighton East","3187"],["Kew","3101"],["Hawthorn","3122"],["Balwyn","3103"],["Balwyn North","3104"],["Camberwell","3124"],["Canterbury","3126"],["Albert Park","3206"],["Elwood","3184"],["Mont Albert","3127"],["Templestowe","3106"]]}
       />
 
       <LocationFaqCta

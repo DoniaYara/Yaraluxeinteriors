@@ -127,9 +127,9 @@ export default function CamberwellPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Camberwell"
         title="Areas We Serve"
         intro="Yara Luxe operates in Melbourne's eastern and inner-eastern suburbs, including the following areas:"
-        items={[["Hawthorn","3122"],["Hawthorn East",""],["Kew","3101"],["Balwyn","3103"],["Balwyn North","3104"],["Canterbury","3126"],["Surrey Hills",""],["Deepdene",""],["Toorak","3142"],["South Yarra","3141"],["Malvern","3144"],["Glen Iris",""]]}
       />
 
       <LocationFaqCta

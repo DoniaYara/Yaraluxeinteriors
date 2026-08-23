@@ -23,13 +23,6 @@ function ExpCard({ n, title, desc }) {
   );
 }
 
-const MELBOURNE_AREAS = [
-  ["Toorak","3142"],["Brighton","3186"],["Balwyn","3103"],["Canterbury","3126"],
-  ["South Yarra","3141"],["Kew","3101"],["Hawthorn","3122"],["Balwyn North","3104"],
-  ["Camberwell","3124"],["Mont Albert","3127"],["Albert Park","3206"],["Elwood","3184"],
-  ["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Templestowe","3106"],["Brighton East","3187"]
-];
-
 export default function NewBuildServicesPage() {
   return (
     <div className="ylp svc-nb">
@@ -281,7 +274,6 @@ export default function NewBuildServicesPage() {
         title="Areas We Serve Across Melbourne"
         intro="Yara Luxe is proud to offer new-build interior design Melbourne services in Melbourne's prestigious residential suburbs such as:"
         outro="Interior design for luxury homes, family homes, renovation apartments and modern new homes in Melbourne."
-        items={MELBOURNE_AREAS}
       />
 
       <LocationFaqCta

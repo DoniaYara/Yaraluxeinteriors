@@ -23,13 +23,6 @@ function ExpCard({ n, title, desc }) {
   );
 }
 
-const MELBOURNE_AREAS = [
-  ["Toorak","3142"],["Brighton","3186"],["Balwyn","3103"],["Canterbury","3126"],
-  ["South Yarra","3141"],["Kew","3101"],["Hawthorn","3122"],["Balwyn North","3104"],
-  ["Camberwell","3124"],["Mont Albert","3127"],["Albert Park","3206"],["Elwood","3184"],
-  ["Armadale","3143"],["Malvern","3144"],["Prahran","3181"],["Templestowe","3106"],["Brighton East","3187"]
-];
-
 export default function SupervisionServicesPage() {
   return (
     <div className="ylp svc-sup">
@@ -302,7 +295,6 @@ export default function SupervisionServicesPage() {
         title="Across Melbourne, we serve the following areas"
         intro="At Yara Luxe, we are proud to offer Interior Design Project Supervision Melbourne services throughout Melbourne's top residential suburbs, such as:"
         outro="We deliver bespoke supervision services for luxury homes, renovations, apartments and contemporary residential developments throughout Melbourne."
-        items={MELBOURNE_AREAS}
       />
 
       <LocationFaqCta

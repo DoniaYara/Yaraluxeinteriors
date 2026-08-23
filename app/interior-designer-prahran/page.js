@@ -110,9 +110,9 @@ export default function PrahranPage() {
       </section>
 
       <AreasWeServe
+        excludeSuburb="Prahran"
         title="Areas We Serve"
         intro="Yara Luxe operates in the inner-city and inner-eastern suburbs of Melbourne in partnership with Prahran 3181; these include the following:"
-        items={[["South Yarra","3141"],["Windsor",""],["Armadale","3143"],["Toorak","3142"],["Malvern","3144"],["St Kilda",""],["Albert Park","3206"],["Elwood","3184"],["Richmond",""],["Hawthorn","3122"],["Kew","3101"],["Camberwell","3124"]]}
       />
 
       <LocationFaqCta
