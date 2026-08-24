@@ -9,7 +9,7 @@ function srcOf(path) {
   return path.startsWith("http") || path.startsWith("/") ? path : `${U}/${path}`;
 }
 
-export default function ProjectLightbox({ project, open, onClose }) {
+export default function ProjectLightbox({ project, open, onClose, startIndex = 0 }) {
   const images = useMemo(() => {
     if (!project) return [];
     const list = project.gallery?.length
@@ -21,8 +21,8 @@ export default function ProjectLightbox({ project, open, onClose }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (open) setIndex(0);
-  }, [open, project?.title]);
+    if (open) setIndex(startIndex);
+  }, [open, project?.title, startIndex]);
 
   const go = useCallback(
     (dir) => {
@@ -48,12 +48,6 @@ export default function ProjectLightbox({ project, open, onClose }) {
   }, [open, onClose, go]);
 
   if (!open || !project || !images.length) return null;
-
-  // Three thumbs under the main image — sliding window around current
-  const thumbIndexes = [];
-  for (let offset = 1; offset <= Math.min(3, images.length - 1); offset += 1) {
-    thumbIndexes.push((index + offset) % images.length);
-  }
 
   return (
     <div className="project-lightbox" role="dialog" aria-modal="true" aria-label={project.title} onClick={onClose}>
@@ -82,28 +76,6 @@ export default function ProjectLightbox({ project, open, onClose }) {
             ›
           </button>
         </div>
-
-        {thumbIndexes.length > 0 ? (
-          <div className="project-lightbox-thumbs">
-            {thumbIndexes.map((ti) => (
-              <button
-                type="button"
-                key={`${ti}-${images[ti]}`}
-                className="project-lightbox-thumb"
-                onClick={() => setIndex(ti)}
-                aria-label={`View image ${ti + 1}`}
-              >
-                <OptImage
-                  src={images[ti]}
-                  alt=""
-                  width={480}
-                  height={320}
-                  sizes="(max-width: 700px) 30vw, 220px"
-                />
-              </button>
-            ))}
-          </div>
-        ) : null}
 
         <div className="project-lightbox-counter">
           {index + 1} / {images.length}

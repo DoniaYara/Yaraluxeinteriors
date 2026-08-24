@@ -4,7 +4,6 @@ import PageHero from "@/components/PageHero";
 import BlogSidebar from "@/components/BlogSidebar";
 import BlogAuthor from "@/components/BlogAuthor";
 import BlogCard from "@/components/BlogCard";
-import { BLOG_BANNER } from "@/lib/data";
 import { postHref, seoHeadings } from "@/lib/blog";
 import { enrichBlogHtml } from "@/lib/blog-internal-links";
 import { articlePageGraph } from "@/lib/schema";
@@ -44,7 +43,8 @@ export default function BlogPostView({
       {!preview ? <JsonLd data={articlePageGraph(post)} /> : null}
       <PageHero
         title={preview ? `${post.title} (Preview)` : post.title}
-        image={BLOG_BANNER}
+        image={postImageSrc(post)}
+        mirror
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/blog", label: "Blog" },
