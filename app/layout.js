@@ -37,6 +37,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQDXHMGS');`
+          }}
+        />
+        {/* End Google Tag Manager */}
         <link rel="icon" href="/uploads/2024/11/cropped-web-app-manifest-512x512-1-32x32.png" />
         <link rel="apple-touch-icon" href="/uploads/brand/apple-touch-icon-180.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/uploads/brand/app-icon-192.png" />
@@ -47,6 +58,17 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WQDXHMGS"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{if("scrollRestoration" in history)history.scrollRestoration="manual";}catch(e){}var n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];if(n&&(n.type==="reload"||n.type==="navigate"))window.scrollTo(0,0);function u(){var y=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.toggle("show-back-top",y>120);document.documentElement.classList.toggle("is-scrolled",y>16);}u();window.addEventListener("scroll",u,{passive:true,capture:true});window.addEventListener("load",u);window.addEventListener("pageshow",u);})();`
