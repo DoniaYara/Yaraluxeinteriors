@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { PROJECTS, U, asProject } from "@/lib/data";
 import OptImage from "@/components/OptImage";
+import ProjectLightbox from "@/components/ProjectLightbox";
 import { SIZES } from "@/lib/image-alts";
 
 const FILTERS = ["All", "Decor", "Furniture", "Interior", "Exterior"];
@@ -14,7 +15,17 @@ export default function PortfolioMetro({
   limit
 }) {
   const [filter, setFilter] = useState("All");
-  const list = PROJECTS.map(asProject);
+  const [active, setActive] = useState(null);
+  const list = useMemo(() => PROJECTS.map(asProject), []);
+  const counts = useMemo(() => {
+    const next = { All: list.length };
+    for (const p of list) {
+      for (const cat of p.cats || []) {
+        next[cat] = (next[cat] || 0) + 1;
+      }
+    }
+    return next;
+  }, [list]);
   const shown = list
     .filter((p) => filter === "All" || p.cats.includes(filter))
     .slice(0, limit || list.length);
@@ -34,7 +45,7 @@ export default function PortfolioMetro({
                 }}
               >
                 {c}
-                <span className="filter-count" />
+                <span className="filter-count">{counts[c] ?? 0}</span>
               </a>
             </li>
           ))}
@@ -42,7 +53,19 @@ export default function PortfolioMetro({
       </div>
       <div className={gridClass}>
         {shown.map((p) => (
-          <div className="project-item" key={p.title}>
+          <div
+            className="project-item is-clickable"
+            key={p.title}
+            role="button"
+            tabIndex={0}
+            onClick={() => setActive(p)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setActive(p);
+              }
+            }}
+          >
             <div className="projects-box">
               <div className="projects-thumbnail">
                 <OptImage
@@ -69,6 +92,8 @@ export default function PortfolioMetro({
           </div>
         ))}
       </div>
+
+      <ProjectLightbox project={active} open={Boolean(active)} onClose={() => setActive(null)} />
     </div>
   );
 }

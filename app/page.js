@@ -29,7 +29,10 @@ import {
 
 export const metadata = withPageSeo({
   title: "Luxury Interior Designer Melbourne | Yara Luxe",
-  description: "Luxury interior design in Melbourne backed by 19+ years of experience. Bespoke interiors for renovations, new builds and full homes. Start your project."
+  description: "Luxury interior design in Melbourne backed by 19+ years of experience. Bespoke interiors for renovations, new builds and full homes. Start your project.",
+  verification: {
+    google: "id_JAGsQUI97aTXnJL-YUYYHKPirh7LeffPmS4KxjSQ"
+  }
 }, "/");
 
 const FEATURES = [

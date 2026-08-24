@@ -51,7 +51,7 @@
   font-family: var(--yl-sans);
   font-weight: 400;
   color: var(--yl-text);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
 }
@@ -150,7 +150,7 @@
 }
 .ylp .hero-desc {
   font-family: var(--yl-sans);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 300;
   color: rgba(255,255,255,0.78);
   max-width: 640px;
@@ -203,7 +203,7 @@
 }
 .ylp .bt {
   font-family: var(--yl-sans);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 300;
   color: #444;
   line-height: 1.85;
@@ -237,7 +237,7 @@
 .ylp .dark-sp { background: var(--yl-black); padding: 90px 60px; }
 .ylp .dark-body {
   font-family: var(--yl-sans);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 300;
   color: rgba(255,255,255,0.86);
   line-height: 1.85;
@@ -684,8 +684,8 @@
 .ylp .light-cards .exp-num { color: rgba(0,0,0,0.08); }
 .ylp .light-cards .exp-desc { color: #444; }
 .ylp .light-cards .exp-card:hover { border-color: rgba(0,0,0,0.18); background: #fafafa; }
-.ylp .dark-intro { font-family: var(--yl-sans); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.86); line-height: 1.85; max-width: 700px; margin-bottom: 52px; }
-.ylp .svc-note { font-family: var(--yl-sans); font-size: 16px; font-weight: 300; color: #444; line-height: 1.85; margin-top: 32px; }
+.ylp .dark-intro { font-family: var(--yl-sans); font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.86); line-height: 1.85; max-width: 700px; margin-bottom: 52px; }
+.ylp .svc-note { font-family: var(--yl-sans); font-size: 17px; font-weight: 300; color: #444; line-height: 1.85; margin-top: 32px; }
 .ylp .light-cards .exp-card-list li { color: #444; border-bottom-color: var(--yl-border); }
 .ylp .light-cards .exp-card-list li::before { background: var(--yl-black); }
 .ylp .gallery-strip {
@@ -1050,7 +1050,20 @@
 .pf-page .btn-details:hover:before {
   width: calc(100% + 14px);
 }
-.pf-page .filter-count { display: none; }
+.pf-page .filter-count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: super;
+  line-height: 1;
+  color: #8a8a8a;
+}
+.pf-page .btn-details.selected .filter-count,
+.pf-page .btn-details:hover .filter-count {
+  color: #1a1a1a;
+}
 .pf-page .projects-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

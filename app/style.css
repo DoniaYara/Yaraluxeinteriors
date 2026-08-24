@@ -19,7 +19,7 @@ body {
   font-weight: 400;
   color: #2a2a2a;
   background: var(--bg);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -729,7 +729,7 @@ section.cream { background: var(--cream); }
   margin: 0 0 28px;
 }
 .legal-wrap p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: #555;
   margin: 0 0 16px;
@@ -1531,7 +1531,7 @@ form textarea { min-height: 120px; resize: vertical; }
 }
 .our-svc-features-copy .ot-kicker { color: #9f9e9e; }
 .our-svc-features-copy .ot-title { color: #fff; margin-bottom: 18px; }
-.our-svc-features-copy p { color: #bfbfbf; font-size: 16px; line-height: 1.85; }
+.our-svc-features-copy p { color: #bfbfbf; font-size: 17px; line-height: 1.85; }
 .our-svc-bottom { padding: 110px 0; background: #fff; }
 .our-svc-bottom-grid {
   display: grid;
@@ -1572,7 +1572,7 @@ form textarea { min-height: 120px; resize: vertical; }
 .our-svc-box p { margin: 0; }
 .our-svc-child-body { padding: 110px 0; background: #fff; }
 .our-svc-child-body .ot-title { margin-bottom: 28px; }
-.our-svc-child-body p { color: #555; font-size: 16px; line-height: 1.85; margin: 0 0 18px; max-width: 860px; }
+.our-svc-child-body p { color: #555; font-size: 17px; line-height: 1.85; margin: 0 0 18px; max-width: 860px; }
 
 /* Our Process */
 .process-page .octf-btn {
@@ -2654,7 +2654,20 @@ form textarea { min-height: 120px; resize: vertical; }
 }
 .home-page .project_filters .btn-details.selected:before,
 .home-page .project_filters .btn-details:hover:before { width: 100%; }
-.home-page .filter-count { display: none; }
+.home-page .filter-count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: super;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.55);
+}
+.home-page .project_filters .btn-details.selected .filter-count,
+.home-page .project_filters .btn-details:hover .filter-count {
+  color: rgba(255, 255, 255, 0.9);
+}
 .home-page .projects-grid.pf_4_cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2769,7 +2782,7 @@ form textarea { min-height: 120px; resize: vertical; }
   margin: 18px 0 0;
   text-align: left;
   color: #6b6b6b;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.85;
 }
 .home-process-steps {
@@ -3403,7 +3416,7 @@ form textarea { min-height: 120px; resize: vertical; }
 .home-seo-intro {
   max-width: 640px;
   color: #9f9e9e;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   margin: 0 0 40px;
 }
@@ -4659,3 +4672,136 @@ html.show-back-top .float-top:hover {
 
 
 
+/* Portfolio project lightbox */
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 32px;
+}
+.project-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.85;
+}
+.project-lightbox-close:hover { opacity: 1; }
+.project-lightbox-inner {
+  width: min(1100px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-lightbox-title {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-head, Georgia, serif);
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.project-lightbox-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  gap: 8px;
+}
+.project-lightbox-main {
+  width: 100%;
+  background: #0a0a0a;
+  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-lightbox-main img,
+.project-lightbox-main-img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: min(58vh, 620px);
+  object-fit: contain !important;
+  display: block;
+}
+.project-lightbox-nav {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.project-lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.project-lightbox-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.project-lightbox-thumb {
+  border: 1px solid transparent;
+  padding: 0;
+  background: #111;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+.project-lightbox-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  opacity: 0.88;
+  transition: opacity 0.2s, transform 0.35s;
+}
+.project-lightbox-thumb:hover img {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.project-lightbox-counter {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+.project-item.is-clickable { cursor: pointer; }
+
+@media (max-width: 700px) {
+  .project-lightbox-stage {
+    grid-template-columns: 36px 1fr 36px;
+    gap: 4px;
+  }
+  .project-lightbox-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+  .project-lightbox-thumbs { gap: 8px; }
+  .project-lightbox-main img,
+  .project-lightbox-main-img {
+    max-height: 42vh;
+  }
+}
