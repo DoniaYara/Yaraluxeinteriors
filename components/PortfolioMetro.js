@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { PROJECTS, U, asProject } from "@/lib/data";
+import { portfolioHref } from "@/lib/portfolio-projects";
 import OptImage from "@/components/OptImage";
-import ProjectLightbox from "@/components/ProjectLightbox";
 import { SIZES } from "@/lib/image-alts";
 
 const FILTERS = ["All", "Decor", "Furniture", "Interior", "Exterior"];
@@ -15,7 +16,6 @@ export default function PortfolioMetro({
   limit
 }) {
   const [filter, setFilter] = useState("All");
-  const [active, setActive] = useState(null);
   const list = useMemo(() => PROJECTS.map(asProject), []);
   const counts = useMemo(() => {
     const next = { All: list.length };
@@ -52,48 +52,39 @@ export default function PortfolioMetro({
         </ul>
       </div>
       <div className={gridClass}>
-        {shown.map((p) => (
-          <div
-            className="project-item is-clickable"
-            key={p.title}
-            role="button"
-            tabIndex={0}
-            onClick={() => setActive(p)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setActive(p);
-              }
-            }}
-          >
-            <div className="projects-box">
-              <div className="projects-thumbnail">
-                <OptImage
-                  src={`${U}/${p.thumb || p.img}`}
-                  alt={p.title}
-                  width={720}
-                  height={720}
-                  sizes={SIZES.portfolio}
-                />
-              </div>
-              <div className="portfolio-info">
-                <div className="portfolio-info-inner">
-                  <h5>
-                    <span className="title-link">{p.title}</span>
-                  </h5>
-                  <p className="portfolio-cates">
-                    {p.cats.map((c) => (
-                      <span key={c}>{c}</span>
-                    ))}
-                  </p>
+        {shown.map((p) => {
+          const href = portfolioHref(p.title);
+          return (
+            <div className="project-item is-clickable" key={p.title}>
+              <Link href={href} className="project-item-link">
+                <div className="projects-box">
+                  <div className="projects-thumbnail">
+                    <OptImage
+                      src={`${U}/${p.thumb || p.img}`}
+                      alt={p.title}
+                      width={720}
+                      height={720}
+                      sizes={SIZES.portfolio}
+                    />
+                  </div>
+                  <div className="portfolio-info">
+                    <div className="portfolio-info-inner">
+                      <h5>
+                        <span className="title-link">{p.title}</span>
+                      </h5>
+                      <p className="portfolio-cates">
+                        {p.cats.map((c) => (
+                          <span key={c}>{c}</span>
+                        ))}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-
-      <ProjectLightbox project={active} open={Boolean(active)} onClose={() => setActive(null)} />
     </div>
   );
 }

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${project.title} – Yara Luxe Interiors`,
-    description: project.intro[0],
+    description: `${project.title} — interior design project by Yara Luxe Interiors.`,
     robots: { index: false, follow: false },
     alternates: { canonical: absoluteUrl(`/portfolio/${slug}`) }
   };
